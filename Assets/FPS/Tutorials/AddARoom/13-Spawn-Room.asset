@@ -40,7 +40,6 @@ MonoBehaviour:
           m_MaskSizeModifier: 0
           m_UnmaskedControls:
           - m_SelectorMode: 4
-            m_SelectorMatchType: 0
             m_GUIContent:
               m_Text: 
               m_Image: {fileID: 0}
