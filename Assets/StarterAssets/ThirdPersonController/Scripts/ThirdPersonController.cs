@@ -90,6 +90,7 @@ namespace StarterAssets
         // timeout deltatime
         private float _jumpTimeoutDelta;
         private float _fallTimeoutDelta;
+        private bool _doubleJumpAble;
 
         // animation IDs
         private int _animIDSpeed;
@@ -303,9 +304,9 @@ namespace StarterAssets
                 if (_input.jump && _jumpTimeoutDelta <= 0.0f)
                 {
                     // the square root of H * -2 * G = how much velocity needed to reach desired height
-                    _verticalVelocity = Mathf.Sqrt(JumpHeight * -2f * Gravity);
-
-                    // update animator if using character
+                    _verticalVelocity = Mathf.Sqrt(JumpHeight * -5f * Gravity);
+                    _doubleJumpAble = true;
+                    
                     if (_hasAnimator)
                     {
                         _animator.SetBool(_animIDJump, true);
@@ -330,10 +331,22 @@ namespace StarterAssets
                 }
                 else
                 {
-                    // update animator if using character
                     if (_hasAnimator)
                     {
                         _animator.SetBool(_animIDFreeFall, true);
+                        _animator.SetBool(_animIDJump, false);
+                    }
+
+                    if (_doubleJumpAble && _input.jump)
+                    {
+                        _doubleJumpAble = false;
+                        Debug.Log("Duble");
+                        _verticalVelocity = Mathf.Sqrt(JumpHeight * -5f * Gravity);
+                        if (_hasAnimator)
+                        {
+                            _animator.SetBool(_animIDFreeFall, false);
+                            _animator.SetBool(_animIDJump, true);
+                        }
                     }
                 }
 
