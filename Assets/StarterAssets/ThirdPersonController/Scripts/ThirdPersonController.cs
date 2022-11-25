@@ -304,7 +304,7 @@ namespace StarterAssets
                 if (_input.jump && _jumpTimeoutDelta <= 0.0f)
                 {
                     // the square root of H * -2 * G = how much velocity needed to reach desired height
-                    _verticalVelocity = Mathf.Sqrt(JumpHeight * -5f * Gravity);
+                    _verticalVelocity = Mathf.Sqrt(JumpHeight * -3f * Gravity);
                     _doubleJumpAble = true;
                     
                     if (_hasAnimator)
@@ -317,6 +317,7 @@ namespace StarterAssets
                 if (_jumpTimeoutDelta >= 0.0f)
                 {
                     _jumpTimeoutDelta -= Time.deltaTime;
+                    _input.jump = false;
                 }
             }
             else
@@ -341,7 +342,7 @@ namespace StarterAssets
                     {
                         _doubleJumpAble = false;
                         Debug.Log("Duble");
-                        _verticalVelocity = Mathf.Sqrt(JumpHeight * -5f * Gravity);
+                        _verticalVelocity = Mathf.Sqrt(JumpHeight * -2f * Gravity);
                         if (_hasAnimator)
                         {
                             _animator.SetBool(_animIDFreeFall, false);
