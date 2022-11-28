@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6786682645053672229}
   - component: {fileID: 6786682645053672235}
   m_Layer: 0
-  m_Name: LevelFade
+  m_Name: Level Changer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

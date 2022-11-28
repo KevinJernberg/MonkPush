@@ -36,6 +36,9 @@ namespace StarterAssets
         [Tooltip("The height the player can jump")]
         public float JumpHeight = 1.2f;
 
+        [Tooltip("The height the player can double jump")]
+        public float DoubleJumpHeight = 1.2f;
+
         [Tooltip("The character uses its own gravity value. The engine default is -9.81f")]
         public float Gravity = -15.0f;
 
@@ -284,6 +287,7 @@ namespace StarterAssets
         {
             if (Grounded)
             {
+                _doubleJumpAble = true;
                 // reset the fall timeout timer
                 _fallTimeoutDelta = FallTimeout;
 
@@ -304,8 +308,7 @@ namespace StarterAssets
                 if (_input.jump && _jumpTimeoutDelta <= 0.0f)
                 {
                     // the square root of H * -2 * G = how much velocity needed to reach desired height
-                    _verticalVelocity = Mathf.Sqrt(JumpHeight * -3f * Gravity);
-                    _doubleJumpAble = true;
+                    _verticalVelocity = Mathf.Sqrt(JumpHeight * Gravity * -1);
                     
                     if (_hasAnimator)
                     {
@@ -342,7 +345,7 @@ namespace StarterAssets
                     {
                         _doubleJumpAble = false;
                         Debug.Log("Duble");
-                        _verticalVelocity = Mathf.Sqrt(JumpHeight * -2f * Gravity);
+                        _verticalVelocity = Mathf.Sqrt(DoubleJumpHeight * Gravity * -1f);
                         if (_hasAnimator)
                         {
                             _animator.SetBool(_animIDFreeFall, false);
