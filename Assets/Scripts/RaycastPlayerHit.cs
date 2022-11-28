@@ -57,6 +57,7 @@ public class RaycastPlayerHit : MonoBehaviour
                     
                     
                     //TODO: Make this a switch case, to increase readability 
+                    _newMovedPos = _oldPos;
                     if (characterDiagonalCheck is < 30 or > 330) //Pos Z 
                     {
                         _pushedDirection = PushDir.North;
