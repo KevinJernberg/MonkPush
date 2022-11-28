@@ -85,7 +85,7 @@ public class RaycastPlayerHit : MonoBehaviour
                     }
                     
                     // Sets a new position for the collision check. Right above the lowest point of the block.
-                    Vector3 collisionCheckOriginPoint = _oldPos - new Vector3(0, _foundHitBlock.transform.localScale.y * 0.5f - 0.1f, 0); 
+                    Vector3 collisionCheckOriginPoint = _oldPos - new Vector3(0, _foundHitBlock.transform.localScale.y * 0.5f - 0.05f, 0); 
                     
                     if (!Physics.Raycast(collisionCheckOriginPoint, _boxForwardDirection, 2f, 192))
                     {
