@@ -29,7 +29,7 @@ namespace Work_In_Progress
                 if (_input.push)
                 {
                     _input.push = false;
-                    _hitBlock.transform.gameObject.GetComponent<BlockPusher>().Push(_hitBlock.normal, PushForce);
+                    _hitBlock.transform.gameObject.GetComponent<BlockPusher>().StartPush(_hitBlock.normal, PushForce);
                 }
             }
             else
