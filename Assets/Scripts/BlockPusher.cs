@@ -67,7 +67,7 @@ public class BlockPusher : MonoBehaviour
     private bool isFalling()
     {
         Vector3 fallingPoint = transform.position + _fallingPointOffset;
-        if (Physics.Raycast(fallingPoint, Vector3.down, 0.05f))
+        if (Physics.Raycast(fallingPoint, Vector3.down, 0.10f))
         {
             if (_falling)
             {
@@ -86,7 +86,7 @@ public class BlockPusher : MonoBehaviour
         _falling = true;
         Vector3 fallingPoint = transform.position;
         Debug.DrawRay(fallingPoint, Vector3.down, Color.magenta);
-        if (!Physics.Raycast(fallingPoint, Vector3.down, transform.localScale.y / 2 + 0.05f))
+        if (!Physics.Raycast(fallingPoint, Vector3.down, transform.localScale.y / 2 + 0.10f))
         {
             transform.position += Vector3.down * (5f * Time.deltaTime);
         }
