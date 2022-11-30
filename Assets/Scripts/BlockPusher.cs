@@ -16,7 +16,10 @@ public class BlockPusher : MonoBehaviour
 
     // Update is called once per frame
 
-    
+    private void Start()
+    {
+        
+    }
 
     void Update()
     {
@@ -38,16 +41,16 @@ public class BlockPusher : MonoBehaviour
         _pushForce = force;
         _moving = true;
         _fallingPointOffset = new Vector3();
-        _fallingPointOffset.y = -(transform.localScale.y / 2);
+        //_fallingPointOffset.y = -(transform.localScale.y / 2) + 0.1f;
         if (_PushDirection.x == 0) // Moving in Z axis
         {
             _collisionEdgeDistance = transform.localScale.z / 2f;
-            _fallingPointOffset.z = -_collisionEdgeDistance;
+            _fallingPointOffset.z = _PushDirection.z * -_collisionEdgeDistance;
         }
         else // Moving in X axis
         {
             _collisionEdgeDistance = transform.localScale.x / 2f;
-            _fallingPointOffset.x = -_collisionEdgeDistance;
+            _fallingPointOffset.x = _PushDirection.x * -_collisionEdgeDistance;
         }
     }
 
@@ -59,7 +62,6 @@ public class BlockPusher : MonoBehaviour
             transform.position.y - transform.localScale.y * 0.5f + 0.05f, transform.position.z);
         if (Physics.Raycast(collisionCheckOriginPoint, _PushDirection, _collisionEdgeDistance))
         {
-            Debug.Log("wallhit");
             _moving = false;
             RestrictPosition();
         }
@@ -69,16 +71,16 @@ public class BlockPusher : MonoBehaviour
     {
         Vector3 fallingPoint = transform.position + _fallingPointOffset;
         Debug.DrawRay(fallingPoint, Vector3.down, Color.magenta);
-        if (Physics.Raycast(fallingPoint, Vector3.down, 0.1f))
+        if (Physics.Raycast(fallingPoint, Vector3.down,  transform.localScale.y/2 + 0.1f))
         {
             if (_falling)
             {
+                Debug.Log("fallStop");
                 _falling = false;
                 RestrictPosition();
             }
             return false;
         }
-        Debug.Log("nonhit");
         _moving = false;
         return true;
     }
@@ -88,7 +90,7 @@ public class BlockPusher : MonoBehaviour
         _falling = true;
         Vector3 fallingPoint = transform.position;
         Debug.DrawRay(fallingPoint, Vector3.down, Color.magenta);
-        if (!Physics.Raycast(fallingPoint, Vector3.down, transform.localScale.y / 2 + 0.10f))
+        if (!Physics.Raycast(fallingPoint, Vector3.down, + transform.localScale.y/2 + 0.1f))
         {
             transform.position += Vector3.down * (5f * Time.deltaTime);
         }
@@ -96,6 +98,7 @@ public class BlockPusher : MonoBehaviour
 
     private void RestrictPosition()
     {
+        Debug.Log("restrict");
         transform.position = new Vector3(MathF.Round(transform.position.x * 2) / 2,
             MathF.Round(transform.position.y * 2) / 2, MathF.Round(transform.position.z * 2) / 2);
     }
