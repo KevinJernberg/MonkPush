@@ -344,7 +344,6 @@ namespace StarterAssets
                     if (_doubleJumpAble && _input.jump)
                     {
                         _doubleJumpAble = false;
-                        Debug.Log("Duble");
                         _verticalVelocity = Mathf.Sqrt(DoubleJumpHeight * Gravity * -1f);
                         if (_hasAnimator)
                         {

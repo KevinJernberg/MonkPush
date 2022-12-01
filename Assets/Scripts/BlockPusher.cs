@@ -23,7 +23,6 @@ public class BlockPusher : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(_moving);
         if (isFalling())
         {
             Fall();
@@ -57,7 +56,6 @@ public class BlockPusher : MonoBehaviour
     private void Push()
     {
         transform.position += _PushDirection * _pushForce * Time.deltaTime;
-        Debug.Log(_PushDirection);
         Vector3 collisionCheckOriginPoint = new Vector3(transform.position.x,
             transform.position.y - transform.localScale.y * 0.5f + 0.05f, transform.position.z);
         if (Physics.Raycast(collisionCheckOriginPoint, _PushDirection, _collisionEdgeDistance))
@@ -75,7 +73,6 @@ public class BlockPusher : MonoBehaviour
         {
             if (_falling)
             {
-                Debug.Log("fallStop");
                 _falling = false;
                 RestrictPosition();
             }
@@ -98,7 +95,6 @@ public class BlockPusher : MonoBehaviour
 
     private void RestrictPosition()
     {
-        Debug.Log("restrict");
         transform.position = new Vector3(MathF.Round(transform.position.x * 2) / 2,
             MathF.Round(transform.position.y * 2) / 2, MathF.Round(transform.position.z * 2) / 2);
     }
