@@ -26,7 +26,6 @@ public class BlockPusher : MonoBehaviour
         {
             PushAccelerate();
             Push();
-            Debug.Log(_pushAccelerateFactor);
         }
     }
 
