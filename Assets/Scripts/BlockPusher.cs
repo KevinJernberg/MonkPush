@@ -14,12 +14,7 @@ public class BlockPusher : MonoBehaviour
 
     private float _collisionEdgeDistance;
 
-    // Update is called once per frame
-
-    private void Start()
-    {
-        
-    }
+    private float _pushAccelerateFactor = 1f;
 
     void Update()
     {
@@ -29,14 +24,15 @@ public class BlockPusher : MonoBehaviour
         }
         else if (_moving)
         {
+            PushAccelerate();
             Push();
         }
-
     }
 
     public void StartPush(Vector3 direction, float force)
     {
         _PushDirection = direction * -1f;
+        _pushAccelerateFactor = 0.1f;
         _pushForce = force;
         _moving = true;
         _fallingPointOffset = new Vector3();
@@ -55,13 +51,25 @@ public class BlockPusher : MonoBehaviour
 
     private void Push()
     {
-        transform.position += _PushDirection * _pushForce * Time.deltaTime;
+        transform.position += _PushDirection * _pushForce * Time.deltaTime * _pushAccelerateFactor;
         Vector3 collisionCheckOriginPoint = new Vector3(transform.position.x,
             transform.position.y - transform.localScale.y * 0.5f + 0.05f, transform.position.z);
         if (Physics.Raycast(collisionCheckOriginPoint, _PushDirection, _collisionEdgeDistance))
         {
             _moving = false;
             RestrictPosition();
+        }
+    }
+
+    private void PushAccelerate()
+    {
+        if (_pushAccelerateFactor < 1)
+        {
+            _pushAccelerateFactor += Time.deltaTime;
+        }
+        else
+        {
+            _pushAccelerateFactor = 1;
         }
     }
 

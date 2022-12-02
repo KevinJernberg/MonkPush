@@ -39,6 +39,9 @@ namespace StarterAssets
         [Tooltip("The height the player can double jump")]
         public float DoubleJumpHeight = 1.2f;
 
+        [Tooltip("If the player can jump again in the air")]
+        public bool DoubleJump;
+
         [Tooltip("The character uses its own gravity value. The engine default is -9.81f")]
         public float Gravity = -15.0f;
 
@@ -341,7 +344,7 @@ namespace StarterAssets
                         _animator.SetBool(_animIDJump, false);
                     }
 
-                    if (_doubleJumpAble && _input.jump)
+                    if (DoubleJump && _doubleJumpAble && _input.jump)
                     {
                         _doubleJumpAble = false;
                         _verticalVelocity = Mathf.Sqrt(DoubleJumpHeight * Gravity * -1f);
