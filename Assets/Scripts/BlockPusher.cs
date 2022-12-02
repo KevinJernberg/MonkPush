@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.Experimental.GlobalIllumination;
+using UnityEngine.Serialization;
 
 public class BlockPusher : MonoBehaviour
 {
@@ -15,6 +16,9 @@ public class BlockPusher : MonoBehaviour
     private float _collisionEdgeDistance;
 
     private float _pushAccelerateFactor = 1f;
+    
+    [FormerlySerializedAs("BlockWallHitSound")] [SerializeField, Tooltip("The Sound made when a block hits a wall and stops")]
+    private AudioClip blockWallHitSound;
 
     void Update()
     {
@@ -58,6 +62,7 @@ public class BlockPusher : MonoBehaviour
         {
             _moving = false;
             RestrictPosition();
+            AudioSource.PlayClipAtPoint(blockWallHitSound, transform.position);
         }
     }
 
