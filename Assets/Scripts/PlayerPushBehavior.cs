@@ -12,6 +12,9 @@ namespace Work_In_Progress
         [SerializeField, Header("Push Values"), Tooltip("How much force a block will be pushed with")]
         private float PushForce = 4;
 
+        [SerializeField, Header("Sounds"), Tooltip("Pushing a Block")]
+        private AudioClip PlayerPushSound;
+
         void Start()
         {
             _input = GetComponent<StarterAssetsInputs>();
@@ -29,6 +32,7 @@ namespace Work_In_Progress
                 if (_input.push)
                 {
                     _input.push = false;
+                    AudioSource.PlayClipAtPoint(PlayerPushSound, transform.position);
                     _hitBlock.transform.gameObject.GetComponent<BlockPusher>().StartPush(_hitBlock.normal, PushForce);
                 }
             }
