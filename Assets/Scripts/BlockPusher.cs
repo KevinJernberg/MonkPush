@@ -62,7 +62,10 @@ public class BlockPusher : MonoBehaviour
         {
             _moving = false;
             RestrictPosition();
-            AudioSource.PlayClipAtPoint(blockWallHitSound, transform.position);
+            if (blockWallHitSound != null)
+            {
+                AudioSource.PlayClipAtPoint(blockWallHitSound, transform.position);
+            }
         }
     }
 

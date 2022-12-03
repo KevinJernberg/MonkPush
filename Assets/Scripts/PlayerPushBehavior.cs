@@ -32,7 +32,10 @@ namespace Work_In_Progress
                 if (_input.push)
                 {
                     _input.push = false;
-                    AudioSource.PlayClipAtPoint(PlayerPushSound, transform.position);
+                    if (PlayerPushSound != null)
+                    {
+                        AudioSource.PlayClipAtPoint(PlayerPushSound, transform.position);
+                    }
                     _hitBlock.transform.gameObject.GetComponent<BlockPusher>().StartPush(_hitBlock.normal, PushForce);
                 }
             }
