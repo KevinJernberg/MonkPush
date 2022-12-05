@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using StarterAssets;
-using UnityEditor.Compilation;
 using UnityEngine;
 
 public class PlayerRespawn : MonoBehaviour

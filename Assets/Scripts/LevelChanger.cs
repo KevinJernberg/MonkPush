@@ -11,7 +11,6 @@ public class LevelChanger : MonoBehaviour
     {
         _sceneName = sceneName;
         animator.SetTrigger("FadeOut");
-        
     }
 
     private void OnFadeComplete()

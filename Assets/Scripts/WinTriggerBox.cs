@@ -14,7 +14,8 @@ public class WinTriggerBox : MonoBehaviour
         Level_1,
         Level_2,
         Level_3,
-        Hub
+        Hub,
+        WinScene
     }
     public ValidScenes nextScene;
     
@@ -42,6 +43,9 @@ public class WinTriggerBox : MonoBehaviour
                 break;
             case ValidScenes.Hub:
                 _selectedScene = "Hub";
+                break;
+            case ValidScenes.WinScene:
+                _selectedScene = "WinScene";
                 break;
         }
         levelChanger.FadeToLevel(_selectedScene);
