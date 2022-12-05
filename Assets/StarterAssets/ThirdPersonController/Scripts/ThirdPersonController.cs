@@ -157,6 +157,8 @@ namespace StarterAssets
             // reset our timeouts on start
             _jumpTimeoutDelta = JumpTimeout;
             _fallTimeoutDelta = FallTimeout;
+            _input.cursorLocked = true;
+            _input.cursorInputForLook = true;
         }
 
         private void Update()
@@ -366,6 +368,15 @@ namespace StarterAssets
                 _verticalVelocity += Gravity * Time.deltaTime;
             }
         }
+
+        public void ChangeCursorState()
+        {
+            Debug.Log("fuck");
+            _input.cursorLocked = false;
+            _input.cursorInputForLook = false;
+        }
+        
+        
 
         private static float ClampAngle(float lfAngle, float lfMin, float lfMax)
         {

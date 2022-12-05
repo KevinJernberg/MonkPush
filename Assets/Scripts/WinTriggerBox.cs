@@ -18,6 +18,8 @@ public class WinTriggerBox : MonoBehaviour
         WinScene
     }
     public ValidScenes nextScene;
+
+    public GameEvent onWin;
     
     private string _selectedScene;
     
@@ -48,6 +50,8 @@ public class WinTriggerBox : MonoBehaviour
                 _selectedScene = "WinScene";
                 break;
         }
+
+        onWin.Raise();
         levelChanger.FadeToLevel(_selectedScene);
     }
 }

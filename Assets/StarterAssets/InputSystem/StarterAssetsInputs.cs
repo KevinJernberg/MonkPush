@@ -30,9 +30,15 @@ namespace StarterAssets
 
 		public void OnLook(InputValue value)
 		{
-			if(cursorInputForLook)
+			if(cursorInputForLook && cursorLocked)
 			{
 				LookInput(value.Get<Vector2>());
+				Cursor.lockState = CursorLockMode.Locked;
+			}
+			else
+			{
+				Cursor.lockState = CursorLockMode.Confined;
+				LookInput(new Vector2(0, 0));
 			}
 		}
 
