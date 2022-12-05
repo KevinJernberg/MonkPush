@@ -8,16 +8,25 @@ using UnityEngine;
 public class PlayerRespawn : MonoBehaviour
 {
     private Vector3 _respawnPos;
-    // Start is called before the first frame update
+
+    [Tooltip("The Game Event that is called when player presses R")]
+    public GameEvent onPuzzleReset;
+
+    private StarterAssetsInputs _input;
+
     void Start()
     {
         _respawnPos = transform.position;
+        _input = GetComponent<StarterAssetsInputs>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        if (_input.reset)
+        {
+            _input.reset = false;
+            onPuzzleReset.Raise();
+        }
     }
 
     public void Respawn()
@@ -31,6 +40,5 @@ public class PlayerRespawn : MonoBehaviour
     {
         Debug.Log("set");
         _respawnPos = newRespawnPos;
-        
     }
 }

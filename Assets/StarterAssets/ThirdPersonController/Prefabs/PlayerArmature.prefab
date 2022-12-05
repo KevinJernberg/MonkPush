@@ -1036,6 +1036,7 @@ GameObject:
   - component: {fileID: 4416926081852918490}
   - component: {fileID: 5885216827943657505}
   - component: {fileID: 135756642000475821}
+  - component: {fileID: 4165835269807869196}
   - component: {fileID: 2497166705685155995}
   - component: {fileID: 4416926081852918493}
   m_Layer: 8
@@ -1132,6 +1133,7 @@ MonoBehaviour:
   FootstepAudioVolume: 0.3
   JumpHeight: 1.2
   DoubleJumpHeight: 1.2
+  DoubleJump: 0
   Gravity: -15
   JumpTimeout: 0.3
   FallTimeout: 0.15
@@ -1180,9 +1182,38 @@ MonoBehaviour:
   jump: 0
   sprint: 0
   push: 0
+  reset: 0
   analogMovement: 0
   cursorLocked: 1
   cursorInputForLook: 1
+--- !u!114 &4165835269807869196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4416926081852918481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1be569bbda0571145ad4f1b16b5853df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: de7e5f9c1c2e7924db244d75c290e6cd, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2497166705685155995}
+        m_TargetAssemblyTypeName: PlayerRespawn, Assembly-CSharp
+        m_MethodName: Respawn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2497166705685155995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1195,6 +1226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fb9f67a92e2a6a41adba1f81f6fd02d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onPuzzleReset: {fileID: 0}
 --- !u!114 &4416926081852918493
 MonoBehaviour:
   m_ObjectHideFlags: 0

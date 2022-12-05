@@ -11,7 +11,9 @@ GameObject:
   - component: {fileID: 9155300749596972247}
   - component: {fileID: 9155300749596972264}
   - component: {fileID: 9155300749596972265}
+  - component: {fileID: 4959035335585839023}
   - component: {fileID: 9155300749596972266}
+  - component: {fileID: 1837941873514598867}
   - component: {fileID: 3932475781366322006}
   m_Layer: 6
   m_Name: Pushable Cube
@@ -85,6 +87,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &4959035335585839023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9155300749596972267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9efb095debc5034e99a122bb772d9d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!65 &9155300749596972266
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -98,6 +112,34 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1837941873514598867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9155300749596972267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1be569bbda0571145ad4f1b16b5853df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: de7e5f9c1c2e7924db244d75c290e6cd, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4959035335585839023}
+        m_TargetAssemblyTypeName: ResetPuzzleBlock, Assembly-CSharp
+        m_MethodName: ResetPos
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &3932475781366322006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110,3 +152,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24abb43cccb7e6d4cb49607ec747c6bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blockWallHitSound: {fileID: 0}

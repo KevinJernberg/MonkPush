@@ -8,7 +8,7 @@ public class BlockPusher : MonoBehaviour
     private Vector3 _PushDirection;
     private float _pushForce;
 
-    private bool _moving;
+    public bool _moving;
     private bool _falling;
 
     private Vector3 _fallingPointOffset;

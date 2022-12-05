@@ -13,6 +13,7 @@ namespace StarterAssets
 		public bool jump;
 		public bool sprint;
 		public bool push;
+		public bool reset;
 
 		[Header("Movement Settings")]
 		public bool analogMovement;
@@ -49,6 +50,12 @@ namespace StarterAssets
 		{
 			PushInput(value.isPressed);
 		}
+		
+		public void OnReset(InputValue value)
+		{
+			ResetInput(value.isPressed);
+		}
+		
 #endif
 
 
@@ -75,6 +82,11 @@ namespace StarterAssets
 		public void PushInput(bool newPushState)
 		{
 			push = newPushState;
+		}
+		
+		private void ResetInput(bool newResetState)
+		{
+			reset = newResetState;
 		}
 
 		private void OnApplicationFocus(bool hasFocus)
