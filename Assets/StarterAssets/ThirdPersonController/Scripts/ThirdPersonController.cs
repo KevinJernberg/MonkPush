@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
+using Random = UnityEngine.Random;
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
 using UnityEngine.InputSystem;
 #endif
@@ -155,6 +157,9 @@ namespace StarterAssets
             AssignAnimationIDs();
 
             // reset our timeouts on start
+
+            _input.cursorLocked = true;
+            _input.cursorInputForLook = true;
             _jumpTimeoutDelta = JumpTimeout;
             _fallTimeoutDelta = FallTimeout;
         }
@@ -365,6 +370,11 @@ namespace StarterAssets
             {
                 _verticalVelocity += Gravity * Time.deltaTime;
             }
+        }
+
+        public void ChangeCursorState()
+        {
+            _input.cursorLocked = false;
         }
 
         private static float ClampAngle(float lfAngle, float lfMin, float lfMax)
