@@ -15,7 +15,8 @@ public class WinTriggerBox : MonoBehaviour
         Level_2,
         Level_3,
         Hub,
-        WinScene
+        WinScene,
+        StartScene
     }
     public ValidScenes nextScene;
 
@@ -48,6 +49,9 @@ public class WinTriggerBox : MonoBehaviour
                 break;
             case ValidScenes.WinScene:
                 _selectedScene = "WinScene";
+                break;
+            case ValidScenes.StartScene:
+                _selectedScene = "StartScene";
                 break;
         }
 
