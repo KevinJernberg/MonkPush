@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: NonPushableObject
-  m_Shader: {fileID: 4800000, guid: 7cd5de0b884b14f88ab763ef465e1799, type: 3}
+  m_Name: Winbox
+  m_Shader: {fileID: 10770, guid: 0000000000000000f000000000000000, type: 0}
   m_ValidKeywords: []
   m_InvalidKeywords:
   - _SEGMENTED_ON
@@ -64,6 +64,7 @@ Material:
     - _Clipped: 0
     - _ColBright: 0
     - _ColIntense: 1
+    - _ColorMask: 15
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
@@ -71,27 +72,33 @@ Material:
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _Lumin: 0
-    - _MaxLight: 0.9
+    - _MaxLight: 1
     - _Metallic: 0
-    - _MinLight: 0.35
+    - _MinLight: 0
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Offset: 0
     - _Parallax: 0.02
     - _Segmented: 1
-    - _ShnIntense: 0.3
+    - _ShnIntense: 0
     - _ShnOverlap: 0
-    - _ShnRange: 0.05
+    - _ShnRange: 0.15
     - _ShnSmooth: 0
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _Steps: 2
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
+    - _Steps: 3
     - _StpSmooth: 0
     - _UVSec: 0
+    - _UseUIAlphaClip: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.3679245, g: 0.3679245, b: 0.3679245, a: 1}
+    - _Color: {r: 0.36799845, g: 1, b: 0.23113209, a: 0.5803922}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _ShnColor: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+    - _ShnColor: {r: 1, g: 1, b: 0, a: 1}
   m_BuildTextureStacks: []
