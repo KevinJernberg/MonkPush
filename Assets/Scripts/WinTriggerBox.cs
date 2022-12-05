@@ -7,8 +7,6 @@ using UnityEngine.SceneManagement;
 public class WinTriggerBox : MonoBehaviour
 {
     public LevelChanger levelChanger;
-    
-    public GameEvent onWin;
     public enum ValidScenes
     {
         Main,
@@ -50,7 +48,6 @@ public class WinTriggerBox : MonoBehaviour
                 _selectedScene = "WinScene";
                 break;
         }
-        onWin.Raise();
         levelChanger.FadeToLevel(_selectedScene);
     }
 }
