@@ -154,8 +154,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _moving: 0
-  blockCollide: {fileID: -8528417333501668286}
-  blockWallHitSound: {fileID: 0}
+  AudioSource: {fileID: -8528417333501668286}
+  blockWallHitSound: {fileID: 8300000, guid: 387acbb3c5021af43baa76c1073a6d7a, type: 3}
+  blockDragSound: {fileID: 8300000, guid: 5f54be7369ba1c049ba771b58bf177ce, type: 3}
 --- !u!82 &-8528417333501668286
 AudioSource:
   m_ObjectHideFlags: 0
@@ -166,7 +167,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 387acbb3c5021af43baa76c1073a6d7a, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 01f643ae3fcd346499432154b12028cc, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

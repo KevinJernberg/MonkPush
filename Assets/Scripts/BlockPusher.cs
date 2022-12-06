@@ -17,10 +17,15 @@ public class BlockPusher : MonoBehaviour
 
     private float _pushAccelerateFactor = 1f;
 
-    public AudioSource blockCollide;
+    [SerializeField]
     
+    private AudioSource AudioSource;
+
     [FormerlySerializedAs("BlockWallHitSound")] [SerializeField, Tooltip("The Sound made when a block hits a wall and stops")]
     private AudioClip blockWallHitSound;
+    
+    [FormerlySerializedAs("BlockWallHitSound")] [SerializeField, Tooltip("The Sound made when a block hits a wall and stops")]
+    private AudioClip blockDragSound;
 
     void Update()
     {
@@ -41,6 +46,7 @@ public class BlockPusher : MonoBehaviour
         _pushAccelerateFactor = 0.1f;
         _pushForce = force;
         _moving = true;
+        AudioSource.clip = blockDragSound;
         _fallingPointOffset = new Vector3();
         //_fallingPointOffset.y = -(transform.localScale.y / 2) + 0.1f;
         if (_PushDirection.x == 0) // Moving in Z axis
@@ -60,10 +66,14 @@ public class BlockPusher : MonoBehaviour
         transform.position += _PushDirection * _pushForce * Time.deltaTime * _pushAccelerateFactor;
         Vector3 collisionCheckOriginPoint = new Vector3(transform.position.x,
             transform.position.y - transform.localScale.y * 0.5f + 0.05f, transform.position.z);
+        AudioSource.clip = blockDragSound;
+        AudioSource.loop = true;
+        AudioSource.PlayClipAtPoint(blockDragSound, transform.position);
         if (Physics.Raycast(collisionCheckOriginPoint, _PushDirection, _collisionEdgeDistance))
         {
             _moving = false;
-            blockCollide.Play();
+            AudioSource.loop = false;
+            AudioSource.PlayClipAtPoint(blockWallHitSound, transform.position);
             RestrictPosition();
             if (blockWallHitSound != null)
             {

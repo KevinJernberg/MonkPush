@@ -8,7 +8,7 @@ namespace Work_In_Progress
         private StarterAssetsInputs _input;
     
         private RaycastHit _hitBlock;
-        
+
         [SerializeField, Header("Push Values"), Tooltip("How much force a block will be pushed with")]
         private float PushForce = 4;
 
