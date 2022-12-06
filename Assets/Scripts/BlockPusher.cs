@@ -16,6 +16,8 @@ public class BlockPusher : MonoBehaviour
     private float _collisionEdgeDistance;
 
     private float _pushAccelerateFactor = 1f;
+
+    public AudioSource blockCollide;
     
     [FormerlySerializedAs("BlockWallHitSound")] [SerializeField, Tooltip("The Sound made when a block hits a wall and stops")]
     private AudioClip blockWallHitSound;
@@ -61,6 +63,7 @@ public class BlockPusher : MonoBehaviour
         if (Physics.Raycast(collisionCheckOriginPoint, _PushDirection, _collisionEdgeDistance))
         {
             _moving = false;
+            blockCollide.Play();
             RestrictPosition();
             if (blockWallHitSound != null)
             {
