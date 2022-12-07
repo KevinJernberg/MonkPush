@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 74327304}
-  m_IndirectSpecularColor: {r: 0.442465, g: 0.83202004, b: 0.8952985, a: 1}
+  m_IndirectSpecularColor: {r: 0.4426708, g: 0.8320749, b: 0.89529437, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2313,6 +2313,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4026302497858488, guid: b4974e3ae06d3d245a8353b888faed9d, type: 3}
   m_PrefabInstance: {fileID: 842263663}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &311423880 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: -8528417333501668286, guid: 0e0c3f2d1aba32c40aaae3f8cb9613d2, type: 3}
+  m_PrefabInstance: {fileID: 714443615}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &319197235
 PrefabInstance:
@@ -6169,9 +6174,13 @@ PrefabInstance:
     m_TransformParent: {fileID: 1641591754}
     m_Modifications:
     - target: {fileID: 3932475781366322006, guid: 0e0c3f2d1aba32c40aaae3f8cb9613d2, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 1586818890}
+    - target: {fileID: 3932475781366322006, guid: 0e0c3f2d1aba32c40aaae3f8cb9613d2, type: 3}
       propertyPath: blockDragSound
       value: 
-      objectReference: {fileID: 1586818889}
+      objectReference: {fileID: 8300000, guid: 5f54be7369ba1c049ba771b58bf177ce, type: 3}
     - target: {fileID: 9155300749596972247, guid: 0e0c3f2d1aba32c40aaae3f8cb9613d2, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -6689,6 +6698,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1641591754}
     m_Modifications:
+    - target: {fileID: 3932475781366322006, guid: 0e0c3f2d1aba32c40aaae3f8cb9613d2, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 311423880}
     - target: {fileID: 9155300749596972247, guid: 0e0c3f2d1aba32c40aaae3f8cb9613d2, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -8175,6 +8188,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1641591754}
     m_Modifications:
+    - target: {fileID: 3932475781366322006, guid: 0e0c3f2d1aba32c40aaae3f8cb9613d2, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 1628371869}
     - target: {fileID: 9155300749596972247, guid: 0e0c3f2d1aba32c40aaae3f8cb9613d2, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -15299,6 +15316,11 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!82 &1586818890 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: -8528417333501668286, guid: 0e0c3f2d1aba32c40aaae3f8cb9613d2, type: 3}
+  m_PrefabInstance: {fileID: 679371747}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1590930489
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15621,6 +15643,11 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4026302497858488, guid: b4974e3ae06d3d245a8353b888faed9d, type: 3}
   m_PrefabInstance: {fileID: 1493064276}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1628371869 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: -8528417333501668286, guid: 0e0c3f2d1aba32c40aaae3f8cb9613d2, type: 3}
+  m_PrefabInstance: {fileID: 951210998}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1635722592
 PrefabInstance:

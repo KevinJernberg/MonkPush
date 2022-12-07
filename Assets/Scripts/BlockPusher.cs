@@ -19,7 +19,7 @@ public class BlockPusher : MonoBehaviour
 
     [SerializeField]
     
-    private AudioSource AudioSource;
+    private AudioSource audioSource;
 
     [FormerlySerializedAs("BlockWallHitSound")] [SerializeField, Tooltip("The Sound made when a block hits a wall and stops")]
     private AudioClip blockWallHitSound;
@@ -35,6 +35,7 @@ public class BlockPusher : MonoBehaviour
         }
         else if (_moving)
         {
+            PushSound();
             PushAccelerate();
             Push();
         }
@@ -46,7 +47,8 @@ public class BlockPusher : MonoBehaviour
         _pushAccelerateFactor = 0.1f;
         _pushForce = force;
         _moving = true;
-        AudioSource.clip = blockDragSound;
+        audioSource.clip = blockDragSound;
+        audioSource.loop = true;
         _fallingPointOffset = new Vector3();
         //_fallingPointOffset.y = -(transform.localScale.y / 2) + 0.1f;
         if (_PushDirection.x == 0) // Moving in Z axis
@@ -64,21 +66,18 @@ public class BlockPusher : MonoBehaviour
     private void Push()
     {
         transform.position += _PushDirection * _pushForce * Time.deltaTime * _pushAccelerateFactor;
+        Debug.Log(_moving);
         Vector3 collisionCheckOriginPoint = new Vector3(transform.position.x,
             transform.position.y - transform.localScale.y * 0.5f + 0.05f, transform.position.z);
-        AudioSource.clip = blockDragSound;
-        AudioSource.loop = true;
-        AudioSource.PlayClipAtPoint(blockDragSound, transform.position);
         if (Physics.Raycast(collisionCheckOriginPoint, _PushDirection, _collisionEdgeDistance))
         {
             _moving = false;
-            AudioSource.loop = false;
-            AudioSource.PlayClipAtPoint(blockWallHitSound, transform.position);
+            audioSource.loop = false;
+            audioSource.Stop();
+
+            audioSource.clip = blockWallHitSound;
+            audioSource.Play();
             RestrictPosition();
-            if (blockWallHitSound != null)
-            {
-                AudioSource.PlayClipAtPoint(blockWallHitSound, transform.position);
-            }
         }
     }
 
@@ -103,10 +102,14 @@ public class BlockPusher : MonoBehaviour
             if (_falling)
             {
                 _falling = false;
+                audioSource.clip = blockWallHitSound;
+                audioSource.loop = false;
+                audioSource.Play();
                 RestrictPosition();
             }
             return false;
         }
+        audioSource.Stop();
         _moving = false;
         return true;
     }
@@ -126,5 +129,13 @@ public class BlockPusher : MonoBehaviour
     {
         transform.position = new Vector3(MathF.Round(transform.position.x * 2) / 2,
             MathF.Round(transform.position.y * 2) / 2, MathF.Round(transform.position.z * 2) / 2);
+    }
+    
+    private void PushSound()
+    {
+        if (!audioSource.isPlaying)
+        {
+            audioSource.Play();
+        }
     }
 }
