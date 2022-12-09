@@ -283,8 +283,9 @@ namespace StarterAssets
             // update animator if using character
             if (_hasAnimator)
             {
+                Debug.Log(_speed);
                 _animator.SetFloat(_animIDSpeed, _animationBlend);
-                _animator.SetFloat(_animIDMotionSpeed, inputMagnitude);
+                _animator.SetFloat("MoveSpeed", _speed);
             }
         }
 
@@ -317,7 +318,8 @@ namespace StarterAssets
                     
                     if (_hasAnimator)
                     {
-                        _animator.SetBool(_animIDJump, true);
+                        _animator.SetBool("FreeFall", false);
+                        _animator.SetBool("Jump", true);
                     }
                 }
 
@@ -342,8 +344,8 @@ namespace StarterAssets
                 {
                     if (_hasAnimator)
                     {
-                        _animator.SetBool(_animIDFreeFall, true);
-                        _animator.SetBool(_animIDJump, false);
+                        _animator.SetBool("FreeFall", true);
+                        _animator.SetBool("Jump", false);
                     }
 
                     if (DoubleJump && _doubleJumpAble && _input.jump)
@@ -352,8 +354,8 @@ namespace StarterAssets
                         _verticalVelocity = Mathf.Sqrt(DoubleJumpHeight * Gravity * -1f);
                         if (_hasAnimator)
                         {
-                            _animator.SetBool(_animIDFreeFall, false);
-                            _animator.SetBool(_animIDJump, true);
+                            _animator.SetBool("FreeFall", false);
+                            _animator.SetBool("Jump", true);
                         }
                     }
                 }
