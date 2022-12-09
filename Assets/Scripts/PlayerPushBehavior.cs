@@ -6,18 +6,24 @@ namespace Work_In_Progress
     public class PlayerPushBehavior : MonoBehaviour
     {
         private StarterAssetsInputs _input;
+        private Animator _animator;
     
         private RaycastHit _hitBlock;
 
         [SerializeField, Header("Push Values"), Tooltip("How much force a block will be pushed with")]
         private float PushForce = 4;
+        
+        private bool _hasAnimator;
 
         [SerializeField, Header("Sounds"), Tooltip("Pushing a Block")]
         private AudioClip PlayerPushSound;
 
+        private static readonly int Push = Animator.StringToHash("Push");
+
         void Start()
         {
             _input = GetComponent<StarterAssetsInputs>();
+            _hasAnimator = TryGetComponent(out _animator);
         }
 
         // Update is called once per frame
@@ -32,6 +38,10 @@ namespace Work_In_Progress
                 if (_input.push)
                 {
                     _input.push = false;
+                    if (_hasAnimator)
+                    {
+                        _animator.SetTrigger(Push);
+                    }
                     if (PlayerPushSound != null)
                     {
                         AudioSource.PlayClipAtPoint(PlayerPushSound, transform.position);
