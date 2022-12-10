@@ -13,10 +13,8 @@ public class OutOfBounds : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("yep");
         if (other.gameObject.tag == "Player")
         {
-            Debug.Log("player");
             other.gameObject.GetComponent<PlayerRespawn>().Respawn();
         }
     }

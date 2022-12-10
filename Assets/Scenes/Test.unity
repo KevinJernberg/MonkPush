@@ -2415,6 +2415,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayeAnimation Test
       objectReference: {fileID: 0}
+    - target: {fileID: 9173359060935233641, guid: 8cbec0e877004d94dbdb159d44cd3ab8, type: 3}
+      propertyPath: PushForce
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8cbec0e877004d94dbdb159d44cd3ab8, type: 3}
 --- !u!1001 &2348793390516342787
@@ -2493,6 +2497,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3731471319212116857, guid: b996d1bb2c913384c8bc0f43dde08f79, type: 3}
+      propertyPath: m_Size.x
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 3731471319212116857, guid: b996d1bb2c913384c8bc0f43dde08f79, type: 3}
       propertyPath: m_Center.y
       value: 50
