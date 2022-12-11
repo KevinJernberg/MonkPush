@@ -5,6 +5,8 @@ using UnityEngine.Serialization;
 
 public class BlockPusher : MonoBehaviour
 {
+    private BoxCollider _colliderBox;
+    
     private Vector3 _PushDirection;
     private float _pushForce;
 
@@ -26,6 +28,12 @@ public class BlockPusher : MonoBehaviour
     
     [FormerlySerializedAs("BlockWallHitSound")] [SerializeField, Tooltip("The Sound made when a block hits a wall and stops")]
     private AudioClip blockDragSound;
+
+
+    private void Start()
+    {
+        _colliderBox = gameObject.GetComponent<BoxCollider>();
+    }
 
     void Update()
     {
@@ -53,12 +61,12 @@ public class BlockPusher : MonoBehaviour
         //_fallingPointOffset.y = -(transform.localScale.y / 2) + 0.1f;
         if (_PushDirection.x == 0) // Moving in Z axis
         {
-            _collisionEdgeDistance = transform.localScale.z / 2f;
+            _collisionEdgeDistance = (_colliderBox.size.z * transform.localScale.x) / 2f;
             _fallingPointOffset.z = _PushDirection.z * -_collisionEdgeDistance;
         }
         else // Moving in X axis
         {
-            _collisionEdgeDistance = transform.localScale.x / 2f;
+            _collisionEdgeDistance = (_colliderBox.size.x * transform.localScale.x) / 2f;
             _fallingPointOffset.x = _PushDirection.x * -_collisionEdgeDistance;
         }
     }
@@ -66,9 +74,9 @@ public class BlockPusher : MonoBehaviour
     private void Push()
     {
         transform.position += _PushDirection * _pushForce * Time.deltaTime * _pushAccelerateFactor;
-        Debug.Log(_moving);
         Vector3 collisionCheckOriginPoint = new Vector3(transform.position.x,
             transform.position.y - transform.localScale.y * 0.5f + 0.05f, transform.position.z);
+        Debug.DrawRay(collisionCheckOriginPoint, _PushDirection, Color.green);
         if (Physics.Raycast(collisionCheckOriginPoint, _PushDirection, _collisionEdgeDistance))
         {
             _moving = false;
@@ -95,9 +103,9 @@ public class BlockPusher : MonoBehaviour
 
     private bool isFalling()
     {
-        Vector3 fallingPoint = transform.position + _fallingPointOffset;
+        Vector3 fallingPoint = transform.position;
         Debug.DrawRay(fallingPoint, Vector3.down, Color.magenta);
-        if (Physics.Raycast(fallingPoint, Vector3.down,  transform.localScale.y/2 + 0.1f))
+        if (Physics.Raycast(fallingPoint, Vector3.down, 0.15f))
         {
             if (_falling)
             {
@@ -119,7 +127,7 @@ public class BlockPusher : MonoBehaviour
         _falling = true;
         Vector3 fallingPoint = transform.position;
         Debug.DrawRay(fallingPoint, Vector3.down, Color.magenta);
-        if (!Physics.Raycast(fallingPoint, Vector3.down, + transform.localScale.y/2 + 0.1f))
+        if (!Physics.Raycast(fallingPoint, Vector3.down, 0.15f))
         {
             transform.position += Vector3.down * (5f * Time.deltaTime);
         }

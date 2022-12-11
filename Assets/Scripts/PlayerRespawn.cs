@@ -37,7 +37,6 @@ public class PlayerRespawn : MonoBehaviour
     
     public void SetRespawnPoint(Vector3 newRespawnPos)
     {
-        Debug.Log("set");
         _respawnPos = newRespawnPos;
     }
 }

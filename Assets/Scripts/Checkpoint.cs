@@ -17,7 +17,6 @@ public class Checkpoint : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            Debug.Log("boom");
             other.gameObject.GetComponent<PlayerRespawn>().SetRespawnPoint(respawnPoint);
         }
     }
