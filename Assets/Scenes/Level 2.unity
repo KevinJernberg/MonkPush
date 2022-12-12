@@ -3992,6 +3992,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -4
       objectReference: {fileID: 0}
+    - target: {fileID: 2224293947351504966, guid: 8cbec0e877004d94dbdb159d44cd3ab8, type: 3}
+      propertyPath: onPuzzleReset
+      value: 
+      objectReference: {fileID: 11400000, guid: de7e5f9c1c2e7924db244d75c290e6cd, type: 2}
     - target: {fileID: 4198325260313408369, guid: 8cbec0e877004d94dbdb159d44cd3ab8, type: 3}
       propertyPath: m_RootOrder
       value: 0
