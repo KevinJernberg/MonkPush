@@ -21,11 +21,11 @@ public class PlayerRespawn : MonoBehaviour
 
     private void Update()
     {
-        if (_input.reset)
-        {
-            _input.reset = false;
-            onPuzzleReset.Raise();
-        }
+        // if (_input.pause)
+        // {
+        //     _input.pause = false;
+        //     onPuzzleReset.Raise();
+        // }
     }
 
     public void Respawn()

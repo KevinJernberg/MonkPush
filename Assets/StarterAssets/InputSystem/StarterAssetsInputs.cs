@@ -13,7 +13,6 @@ namespace StarterAssets
 		public bool jump;
 		public bool sprint;
 		public bool push;
-		public bool reset;
 		public bool interact;
 
 		[Header("Movement Settings")]
@@ -57,12 +56,6 @@ namespace StarterAssets
 		{
 			PushInput(value.isPressed);
 		}
-		
-		public void OnReset(InputValue value)
-		{
-			ResetInput(value.isPressed);
-		}
-
 		public void OnInteract(InputValue value)
 		{
 			InteractInput(value.isPressed);
@@ -97,12 +90,6 @@ namespace StarterAssets
 		{
 			push = newPushState;
 		}
-		
-		private void ResetInput(bool newResetState)
-		{
-			reset = newResetState;
-		}
-		
 		private void InteractInput(bool newInteractState)
 		{
 			interact = newInteractState;
