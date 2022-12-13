@@ -48,11 +48,14 @@ GameObject:
   - component: {fileID: 4439350345565298288}
   - component: {fileID: 5998830279866327969}
   - component: {fileID: 408127133559997905}
+  - component: {fileID: 4736774144682712689}
+  - component: {fileID: 7965114521649838836}
   - component: {fileID: 2224293947351504966}
   - component: {fileID: 87225024464519680}
   - component: {fileID: 6495390206793429212}
   - component: {fileID: 2129617479412809134}
   - component: {fileID: 9173359060935233641}
+  - component: {fileID: 7969260578371472484}
   m_Layer: 8
   m_Name: PlayerArmature
   m_TagString: Player
@@ -196,8 +199,8 @@ MonoBehaviour:
   jump: 0
   sprint: 0
   push: 0
-  reset: 0
   interact: 0
+  Pause: 0
   analogMovement: 0
   cursorLocked: 1
   cursorInputForLook: 1
@@ -217,10 +220,10 @@ MonoBehaviour:
   response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 87225024464519687}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
+      - m_Target: {fileID: 7965114521649838836}
+        m_TargetAssemblyTypeName: CursorChangeScript, Assembly-CSharp
+        m_MethodName: WinCursorState
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -257,6 +260,58 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &4736774144682712689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 87225024464519692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1be569bbda0571145ad4f1b16b5853df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 8dfaa898222f5f24e8a0fa713c6da851, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7965114521649838836}
+        m_TargetAssemblyTypeName: CursorChangeScript, Assembly-CSharp
+        m_MethodName: ToggleCursorState
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6495390206793429212}
+        m_TargetAssemblyTypeName: PlayerFreezer, Assembly-CSharp
+        m_MethodName: ToggleFrozen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &7965114521649838836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 87225024464519692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 652e7ca92c7910c479c8813a84bf9962, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2224293947351504966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -269,7 +324,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fb9f67a92e2a6a41adba1f81f6fd02d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onPuzzleReset: {fileID: 0}
 --- !u!114 &87225024464519680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -406,6 +460,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PushForce: 4
   PlayerPushSound: {fileID: 0}
+--- !u!114 &7969260578371472484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 87225024464519692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd157a14443cf2345aacb23985b0c470, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onPauseEvent: {fileID: 11400000, guid: 8dfaa898222f5f24e8a0fa713c6da851, type: 2}
 --- !u!1 &90562735387395951
 GameObject:
   m_ObjectHideFlags: 0

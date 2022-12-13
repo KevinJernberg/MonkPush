@@ -9,7 +9,7 @@ public class PlayerRespawn : MonoBehaviour
     private Vector3 _respawnPos;
 
     [Tooltip("The Game Event that is called when player presses R")]
-    public GameEvent onPuzzleReset;
+    private GameEvent onPuzzleReset;
 
     private StarterAssetsInputs _input;
 

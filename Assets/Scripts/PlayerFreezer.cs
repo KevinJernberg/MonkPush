@@ -21,4 +21,9 @@ public class PlayerFreezer : MonoBehaviour
     {
         _playerController.enabled = true;
     }
+
+    public void ToggleFrozen()
+    {
+        _playerController.enabled = !_playerController.enabled;
+    }
 }

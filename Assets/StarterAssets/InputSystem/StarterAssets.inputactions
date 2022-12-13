@@ -280,34 +280,6 @@
                     "isPartOfComposite": false
                 }
             ]
-        },
-        {
-            "name": "PauseMenu",
-            "id": "8100ca45-0be9-4ce5-b26c-221f94e4f1a1",
-            "actions": [
-                {
-                    "name": "Pause",
-                    "type": "Button",
-                    "id": "cedfa040-c6ec-4324-97d1-fa00854e9a3b",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                }
-            ],
-            "bindings": [
-                {
-                    "name": "",
-                    "id": "38c0862c-66fc-46ff-bc7c-9a05c1d30d6c",
-                    "path": "<Keyboard>/escape",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Pause",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                }
-            ]
         }
     ],
     "controlSchemes": [
