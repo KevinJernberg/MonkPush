@@ -51,6 +51,8 @@ public class BlockPusher : MonoBehaviour
 
     public void StartPush(Vector3 direction, float force)
     {
+        if (_moving)
+            return; 
         _PushDirection = direction * -1f;
         _pushAccelerateFactor = 0.1f;
         _pushForce = force;
@@ -77,7 +79,7 @@ public class BlockPusher : MonoBehaviour
         Vector3 collisionCheckOriginPoint = new Vector3(transform.position.x,
             transform.position.y - transform.localScale.y * 0.5f + 0.05f, transform.position.z);
         Debug.DrawRay(collisionCheckOriginPoint, _PushDirection, Color.green);
-        if (Physics.Raycast(collisionCheckOriginPoint, _PushDirection, _collisionEdgeDistance))
+        if (Physics.Raycast(collisionCheckOriginPoint, _PushDirection, _collisionEdgeDistance, Physics.AllLayers, QueryTriggerInteraction.Ignore))
         {
             _moving = false;
             audioSource.loop = false;
@@ -105,7 +107,7 @@ public class BlockPusher : MonoBehaviour
     {
         Vector3 fallingPoint = transform.position + new Vector3(0f, 0.40f, 0f) + _fallingPointOffset;
         Debug.DrawRay(fallingPoint, Vector3.down, Color.magenta);
-        if (Physics.Raycast(fallingPoint, Vector3.down, 0.55f))
+        if (Physics.Raycast(fallingPoint, Vector3.down,out RaycastHit hit, 0.55f, Physics.AllLayers, QueryTriggerInteraction.Ignore))
         {
             if (_falling)
             {
@@ -127,7 +129,7 @@ public class BlockPusher : MonoBehaviour
         _falling = true;
         Vector3 fallingPoint = transform.position;
         Debug.DrawRay(fallingPoint, Vector3.down, Color.magenta);
-        if (!Physics.Raycast(fallingPoint, Vector3.down, 0.15f))
+        if (!Physics.Raycast(fallingPoint, Vector3.down, 0.15f, Physics.AllLayers, QueryTriggerInteraction.Ignore))
         {
             transform.position += Vector3.down * (5f * Time.deltaTime);
         }
