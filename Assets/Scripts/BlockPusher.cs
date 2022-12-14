@@ -81,6 +81,7 @@ public class BlockPusher : MonoBehaviour
         Debug.DrawRay(collisionCheckOriginPoint, _PushDirection, Color.green);
         if (Physics.Raycast(collisionCheckOriginPoint, _PushDirection, _collisionEdgeDistance, Physics.AllLayers, QueryTriggerInteraction.Ignore))
         {
+            Debug.Log("hit");
             _moving = false;
             audioSource.loop = false;
             audioSource.Stop();
