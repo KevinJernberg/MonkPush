@@ -355,9 +355,8 @@ namespace StarterAssets
 
         public void ChangeCursorState()
         {
-            Debug.Log("win");
-            _input.cursorLocked = false;
-            _input.cursorInputForLook = false;
+            _input.cursorLocked = !_input.cursorLocked;
+            _input.cursorInputForLook = !_input.cursorInputForLook;
         }
         
         

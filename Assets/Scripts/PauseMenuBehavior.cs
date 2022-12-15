@@ -13,18 +13,6 @@ public class PauseMenuBehavior : MonoBehaviour
     [SerializeField]
     private Canvas menuWindowCanvas;
 
-
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void ChangePauseState()
     {
         _pause = !_pause;
