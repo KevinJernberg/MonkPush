@@ -6,8 +6,12 @@ using UnityEngine;
 public class ResetPuzzleBlock : MonoBehaviour
 {
     private Vector3 _originalPos;
+
+    [SerializeField] 
+    private AudioSource _audio;
     private void Start()
     {
+        _audio = GetComponent<AudioSource>();
         _originalPos = transform.position;
     }
 
@@ -15,5 +19,7 @@ public class ResetPuzzleBlock : MonoBehaviour
     {
         transform.position = _originalPos;
         gameObject.GetComponent<BlockPusher>()._moving = false;
+
+        _audio.clip = null;
     }
 }
