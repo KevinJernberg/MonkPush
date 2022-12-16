@@ -14,16 +14,16 @@ public class PlayerFreezer : MonoBehaviour
 
     public void Freeze()
     {
-        _playerController.enabled = false;
+        _playerController.isFrozen = true;
     }
     
     public void UnFreeze()
     {
-        _playerController.enabled = true;
+        _playerController.isFrozen = false;
     }
 
     public void ToggleFrozen()
     {
-        _playerController.enabled = !_playerController.enabled;
+        _playerController.isFrozen = !_playerController.isFrozen;
     }
 }
