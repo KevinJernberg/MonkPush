@@ -17,9 +17,6 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Scrapped_Level 1.unity
     guid: cd1307624a2551a4c8f3375f4e6d2515
-  - enabled: 0
-    path: Assets/Scenes/Level 3.unity
-    guid: 28f837577ff39fa428f902a01bdf60c4
   - enabled: 1
     path: Assets/Scenes/StartScene.unity
     guid: b74c9e4d05c0170478e633f9ada0f4b4
@@ -29,6 +26,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level 2.unity
     guid: 5212b19e2dd8c254389d0f7752e418de
+  - enabled: 0
+    path: Assets/Scenes/Level 3.unity
+    guid: 28f837577ff39fa428f902a01bdf60c4
   - enabled: 1
     path: Assets/Scenes/WinScene.unity
     guid: 0dadf16b7c1405e49af6a51865de64ed
