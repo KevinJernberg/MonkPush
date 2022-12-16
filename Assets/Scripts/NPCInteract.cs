@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class NPCInteract : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private BoxCollider _conversationTriggerBox;
     void Start()
     {
-        
+        _conversationTriggerBox = GetComponentInChildren<BoxCollider>();
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         
@@ -18,6 +18,11 @@ public class NPCInteract : MonoBehaviour
 
     public void Interact()
     {
-        gameObject.GetComponentInChildren<BoxCollider>().enabled = true;
+        _conversationTriggerBox.enabled = true;
+    }
+
+    public void Disengage()
+    {
+        _conversationTriggerBox.enabled = false;
     }
 }

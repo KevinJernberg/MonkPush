@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 74327304}
-  m_IndirectSpecularColor: {r: 0.4426708, g: 0.8320749, b: 0.89529437, a: 1}
+  m_IndirectSpecularColor: {r: 0.4429474, g: 0.8321437, b: 0.8952893, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2307,7 +2307,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh66962
+  m_Name: pb_Mesh54186
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6208,7 +6208,15 @@ PrefabInstance:
       value: -3.7165074
       objectReference: {fileID: 0}
     - target: {fileID: 1845701850921384556, guid: 8cbec0e877004d94dbdb159d44cd3ab8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845701850921384556, guid: 8cbec0e877004d94dbdb159d44cd3ab8, type: 3}
       propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845701850921384556, guid: 8cbec0e877004d94dbdb159d44cd3ab8, type: 3}
+      propertyPath: m_LocalRotation.y
       value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2224293947351504966, guid: 8cbec0e877004d94dbdb159d44cd3ab8, type: 3}
@@ -8748,7 +8756,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh67666
+  m_Name: pb_Mesh54906
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -13800,6 +13808,7 @@ MonoBehaviour:
   push: 0
   interact: 0
   Pause: 0
+  Joke: 0
   analogMovement: 0
   cursorLocked: 1
   cursorInputForLook: 1
@@ -18506,7 +18515,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh67684
+  m_Name: pb_Mesh54924
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -20224,7 +20233,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh66680
+  m_Name: pb_Mesh53906
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -27967,7 +27976,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh67582
+  m_Name: pb_Mesh54822
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

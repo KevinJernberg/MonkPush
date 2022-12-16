@@ -29,6 +29,8 @@ public class BlockPusher : MonoBehaviour
     [FormerlySerializedAs("BlockWallHitSound")] [SerializeField, Tooltip("The Sound made when a block hits a wall and stops")]
     private AudioClip blockDragSound;
 
+    private int _soundOffset;
+
 
     private void Start()
     {
@@ -53,12 +55,17 @@ public class BlockPusher : MonoBehaviour
     {
         if (_moving)
             return; 
+        
         _PushDirection = direction * -1f;
         _pushAccelerateFactor = 0.1f;
         _pushForce = force;
+        
         _moving = true;
+        
         audioSource.clip = blockDragSound;
         audioSource.loop = true;
+        _soundOffset = 0;
+        
         _fallingPointOffset = new Vector3();
         //_fallingPointOffset.y = -(transform.localScale.y / 2) + 0.1f;
         if (_PushDirection.x == 0) // Moving in Z axis
@@ -79,16 +86,22 @@ public class BlockPusher : MonoBehaviour
         Vector3 collisionCheckOriginPoint = new Vector3(transform.position.x,
             transform.position.y - transform.localScale.y * 0.5f + 0.05f, transform.position.z);
         Debug.DrawRay(collisionCheckOriginPoint, _PushDirection, Color.green);
+        if (_soundOffset != 2)
+        {
+            _soundOffset++;
+        }
         if (Physics.Raycast(collisionCheckOriginPoint, _PushDirection, _collisionEdgeDistance, Physics.AllLayers, QueryTriggerInteraction.Ignore))
         {
-            Debug.Log("hit");
             _moving = false;
             audioSource.loop = false;
             audioSource.Stop();
-
-            audioSource.clip = blockWallHitSound;
-            audioSource.Play();
+            
             RestrictPosition();
+            if (_soundOffset == 2)
+            {
+                audioSource.clip = blockWallHitSound;
+                audioSource.Play();
+            }
         }
     }
 
