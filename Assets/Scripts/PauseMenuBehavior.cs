@@ -16,7 +16,6 @@ public class PauseMenuBehavior : MonoBehaviour
     public void ChangePauseState()
     {
         _pause = !_pause;
-        Debug.Log(_pause);
         if (_pause)
         {
             backgroundOpacityCanvas.enabled = true;

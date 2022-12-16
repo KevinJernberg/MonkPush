@@ -12,7 +12,6 @@ public class CursorChangeScript : MonoBehaviour
     }
     public void WinCursorState()
     {
-        Debug.Log("win");
         _input.cursorLocked = false;
         _input.cursorInputForLook = false;
     }

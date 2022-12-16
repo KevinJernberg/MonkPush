@@ -67,6 +67,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Joke",
+                    "type": "Button",
+                    "id": "a52fc3b7-02b2-4c30-8c76-1796f105bc91",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -215,17 +224,6 @@
                 },
                 {
                     "name": "",
-                    "id": "9f973413-5e27-4239-acee-38c4a63feeba",
-                    "path": "<Gamepad>/buttonSouth",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Gamepad",
-                    "action": "Jump",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "dc65b89f-9bd3-43fb-92af-d0d87ba5faa4",
                     "path": "<Keyboard>/leftShift",
                     "interactions": "",
@@ -276,6 +274,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "569e47ff-e49d-427c-9230-4d7eeba12baf",
+                    "path": "<Keyboard>/9",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Joke",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ff4a958f-e617-44e8-bd52-c8f838d244d1",
+                    "path": "<Keyboard>/9",
+                    "interactions": "Press(behavior=1)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Joke",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

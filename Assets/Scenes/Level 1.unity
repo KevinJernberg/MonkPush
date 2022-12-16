@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 74327304}
-  m_IndirectSpecularColor: {r: 0.4429474, g: 0.8321437, b: 0.8952893, a: 1}
+  m_IndirectSpecularColor: {r: 0.4426708, g: 0.8320749, b: 0.89529437, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2916,6 +2916,28 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4113854971574422473, guid: 698acc68e436aae4284801dda5243e60, type: 3}
   m_PrefabInstance: {fileID: 224040264}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &230604614 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6495390206793429212, guid: 8cbec0e877004d94dbdb159d44cd3ab8, type: 3}
+  m_PrefabInstance: {fileID: 495289610}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b07ffd89bc9937c4abd324a84df3442d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &230604623 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 87225024464519687, guid: 8cbec0e877004d94dbdb159d44cd3ab8, type: 3}
+  m_PrefabInstance: {fileID: 495289610}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26e54e5a728a9234ab24fcf1460ed8a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &230767790 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1772052688877022, guid: b4974e3ae06d3d245a8353b888faed9d, type: 3}
@@ -4015,6 +4037,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2993431282563878272, guid: e177a97faf3f8d74ea083a12b747c66b, type: 3}
   m_PrefabInstance: {fileID: 324872799}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &331745050 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6786682645053672235, guid: a16295b84bd6f7f4f8e9bb2cf6d24fe8, type: 3}
+  m_PrefabInstance: {fileID: 1413418713}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e53dff79ae9a5644a590ad1d71ea30a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &332219347
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6351,6 +6384,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1549357374, guid: e937c74ef91668b44a960dc2a889e9b1, type: 3}
+      propertyPath: levelChanger
+      value: 
+      objectReference: {fileID: 331745050}
+    - target: {fileID: 1580540160, guid: e937c74ef91668b44a960dc2a889e9b1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 230604614}
+    - target: {fileID: 1580540160, guid: e937c74ef91668b44a960dc2a889e9b1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 230604623}
+    - target: {fileID: 1580540160, guid: e937c74ef91668b44a960dc2a889e9b1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: UnFreeze
+      objectReference: {fileID: 0}
+    - target: {fileID: 1580540160, guid: e937c74ef91668b44a960dc2a889e9b1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: ChangeCursorState
+      objectReference: {fileID: 0}
     - target: {fileID: 2519504636804837625, guid: e937c74ef91668b44a960dc2a889e9b1, type: 3}
       propertyPath: m_Name
       value: PauseMenu

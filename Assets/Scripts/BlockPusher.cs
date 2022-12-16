@@ -108,7 +108,7 @@ public class BlockPusher : MonoBehaviour
     {
         Vector3 fallingPoint = transform.position + new Vector3(0f, 0.40f, 0f) + _fallingPointOffset;
         Debug.DrawRay(fallingPoint, Vector3.down, Color.magenta);
-        if (Physics.Raycast(fallingPoint, Vector3.down,out RaycastHit hit, 0.5f, Physics.AllLayers, QueryTriggerInteraction.Ignore))
+        if (Physics.Raycast(fallingPoint, Vector3.down,out RaycastHit hit, 0.5f, 64+1+128, QueryTriggerInteraction.Ignore))
         {
             if (_falling)
             {
@@ -127,11 +127,13 @@ public class BlockPusher : MonoBehaviour
 
     private void Fall()
     {
+        _falling = true;
         transform.position += Vector3.down * (5f * Time.deltaTime);
     }
 
     private void RestrictPosition()
     {
+        Debug.Log("restrict");
         transform.position = new Vector3(MathF.Round(transform.position.x * 4) / 4,
             MathF.Round(transform.position.y * 4) / 4, MathF.Round(transform.position.z * 4) / 4);
     }

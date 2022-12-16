@@ -15,6 +15,7 @@ namespace StarterAssets
 		public bool push;
 		public bool interact;
 		public bool Pause;
+		public bool Joke;
 
 		[Header("Movement Settings")]
 		public bool analogMovement;
@@ -65,9 +66,12 @@ namespace StarterAssets
 		{
 			PauseInput(value.isPressed);
 		}
-		
-		
-		
+
+		public void OnJoke(InputValue value)
+		{
+			JokeInput(value.isPressed);
+		}
+
 #endif
 
 
@@ -103,6 +107,11 @@ namespace StarterAssets
 		private void PauseInput(bool newPauseState)
 		{
 			Pause = newPauseState;
+		}
+
+		private void JokeInput(bool newJokeState)
+		{
+			Joke = newJokeState;
 		}
 
 		private void OnApplicationFocus(bool hasFocus)
