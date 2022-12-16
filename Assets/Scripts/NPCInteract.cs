@@ -10,12 +10,6 @@ public class NPCInteract : MonoBehaviour
         _conversationTriggerBox = GetComponentInChildren<BoxCollider>();
     }
 
-    
-    void Update()
-    {
-        
-    }
-
     public void Interact()
     {
         _conversationTriggerBox.enabled = true;
