@@ -262,6 +262,8 @@ GameObject:
   - component: {fileID: 1632313205183826253}
   - component: {fileID: 1632313205183826249}
   - component: {fileID: 1632313205183826256}
+  - component: {fileID: 924882879286947071}
+  - component: {fileID: 1535268662385917545}
   m_Layer: 0
   m_Name: LVL1 Dialogue Box
   m_TagString: Untagged
@@ -374,7 +376,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1632313205183826248}
   selectedCommands:
-  - {fileID: 1632313205183826256}
+  - {fileID: 1535268662385917545}
   variables: []
   description: 
   stepPause: 0
@@ -412,8 +414,10 @@ MonoBehaviour:
   eventHandler: {fileID: 1632313205183826255}
   commandList:
   - {fileID: 1632313205183826254}
+  - {fileID: 924882879286947071}
   - {fileID: 1632313205183826253}
   - {fileID: 1632313205183826249}
+  - {fileID: 1535268662385917545}
   - {fileID: 1632313205183826256}
   suppressAllAutoSelections: 0
 --- !u!114 &1632313205183826255
@@ -510,6 +514,40 @@ MonoBehaviour:
   indentLevel: 0
   targetObject: {fileID: 1632313206395992798}
   methodName: Disengage
+  delay: 0
+--- !u!114 &924882879286947071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1632313205183826246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 5
+  indentLevel: 0
+  targetObject: {fileID: 0}
+  methodName: TogglePauseAble
+  delay: 0
+--- !u!114 &1535268662385917545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1632313205183826246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 6
+  indentLevel: 0
+  targetObject: {fileID: 0}
+  methodName: TogglePauseAble
   delay: 0
 --- !u!1 &1632313206395992798
 GameObject:

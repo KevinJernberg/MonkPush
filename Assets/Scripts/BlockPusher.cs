@@ -146,7 +146,6 @@ public class BlockPusher : MonoBehaviour
 
     private void RestrictPosition()
     {
-        Debug.Log("restrict");
         transform.position = new Vector3(MathF.Round(transform.position.x * 4) / 4,
             MathF.Round(transform.position.y * 4) / 4, MathF.Round(transform.position.z * 4) / 4);
     }

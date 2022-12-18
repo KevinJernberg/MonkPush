@@ -7,8 +7,6 @@ namespace Menu_Buttons
     {
         [SerializeField]
         private LevelChanger levelChanger;
-        
-        private string _selectedScene = "MainMenu";
 
         [SerializeField]
         private GameEvent exitEvent;

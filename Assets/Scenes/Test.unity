@@ -818,6 +818,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 924882879286947071, guid: fab23418695f647499a5b93e20565413, type: 3}
+      propertyPath: methodName
+      value: NotPauseable
+      objectReference: {fileID: 0}
+    - target: {fileID: 924882879286947071, guid: fab23418695f647499a5b93e20565413, type: 3}
+      propertyPath: targetObject
+      value: 
+      objectReference: {fileID: 1141061301}
+    - target: {fileID: 1535268662385917545, guid: fab23418695f647499a5b93e20565413, type: 3}
+      propertyPath: methodName
+      value: Pauseable
+      objectReference: {fileID: 0}
+    - target: {fileID: 1535268662385917545, guid: fab23418695f647499a5b93e20565413, type: 3}
+      propertyPath: targetObject
+      value: 
+      objectReference: {fileID: 1141061301}
     - target: {fileID: 1632313205183826249, guid: fab23418695f647499a5b93e20565413, type: 3}
       propertyPath: targetObject
       value: 
@@ -836,7 +852,7 @@ PrefabInstance:
       objectReference: {fileID: 663831170}
     - target: {fileID: 1632313206395992772, guid: fab23418695f647499a5b93e20565413, type: 3}
       propertyPath: m_VersionIndex
-      value: 2980
+      value: 2998
       objectReference: {fileID: 0}
     - target: {fileID: 1632313206395992792, guid: fab23418695f647499a5b93e20565413, type: 3}
       propertyPath: m_Mesh
@@ -942,7 +958,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh89792
+  m_Name: pb_Mesh-12070
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

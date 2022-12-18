@@ -163,6 +163,7 @@ namespace StarterAssets
                 _input.jump = false;
                 _input.move = Vector2.zero;
             }
+
             _hasAnimator = TryGetComponent(out _animator);
 
             JumpAndGravity();
@@ -365,8 +366,7 @@ namespace StarterAssets
             _input.cursorLocked = !_input.cursorLocked;
             _input.cursorInputForLook = !_input.cursorInputForLook;
         }
-        
-        
+
 
         private static float ClampAngle(float lfAngle, float lfMin, float lfMax)
         {
