@@ -166,6 +166,7 @@ MonoBehaviour:
   BottomClamp: -30
   CameraAngleOverride: 0
   LockCameraPosition: 0
+  isFrozen: 0
 --- !u!114 &7914387956821944572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202,6 +203,7 @@ MonoBehaviour:
   push: 0
   interact: 0
   Pause: 0
+  Joke: 0
   analogMovement: 0
   cursorLocked: 1
   cursorInputForLook: 1
@@ -222,8 +224,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 7965114521649838836}
-        m_TargetAssemblyTypeName: CursorChangeScript, Assembly-CSharp
-        m_MethodName: WinCursorState
+        m_TargetAssemblyTypeName: StarterAssets.ThirdPersonController, Assembly-CSharp
+        m_MethodName: ChangeCursorState
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -485,6 +487,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd157a14443cf2345aacb23985b0c470, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pauseAble: 1
   _onPauseEvent: {fileID: 11400000, guid: 8dfaa898222f5f24e8a0fa713c6da851, type: 2}
 --- !u!1 &90562735387395951
 GameObject:
@@ -792,8 +795,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1845701850921384553}
-  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 61.526505, y: 5.015, z: 43.440002}
+  m_LocalRotation: {x: -0, y: -0, z: 2.910383e-11, w: 1}
+  m_LocalPosition: {x: 0.19999991, y: 1.3747101, z: -5.0000005}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1648,7 +1651,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8719124419207885856}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.19999981, y: 1.375, z: -3.7410622}
+  m_LocalPosition: {x: 0.19999991, y: 1.3747101, z: -5.0000005}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1773,7 +1776,7 @@ MonoBehaviour:
   ShoulderOffset: {x: 1, y: 0, z: 0}
   VerticalArmLength: 0
   CameraSide: 0.6
-  CameraDistance: 4
+  CameraDistance: 5
   CameraCollisionFilter:
     serializedVersion: 2
     m_Bits: 1
