@@ -119,7 +119,15 @@ public class BlockPusher : MonoBehaviour
 
     private bool isFalling()
     {
-        Vector3 fallingPoint = transform.position + new Vector3(0f, 0.40f, 0f) + _fallingPointOffset;
+        Vector3 fallingPoint;
+        if (_falling)
+        {
+            fallingPoint = transform.position + new Vector3(0f, 0.40f, 0f);
+        }
+        else
+        {
+            fallingPoint = transform.position + new Vector3(0f, 0.40f, 0f) + _fallingPointOffset;
+        }
         Debug.DrawRay(fallingPoint, Vector3.down, Color.magenta);
         if (Physics.Raycast(fallingPoint, Vector3.down,out RaycastHit hit, 0.5f, 64+1+128, QueryTriggerInteraction.Ignore))
         {
