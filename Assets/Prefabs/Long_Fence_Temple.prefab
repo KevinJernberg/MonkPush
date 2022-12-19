@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2650420100405463117}
   - component: {fileID: 1398355162996017128}
   - component: {fileID: 3783872326394114850}
-  - component: {fileID: 7411513888216871673}
+  - component: {fileID: 5565145938063585847}
   m_Layer: 0
   m_Name: Long_Fence_Temple
   m_TagString: Untagged
@@ -84,8 +84,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &7411513888216871673
-MeshCollider:
+--- !u!65 &5565145938063585847
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -94,7 +94,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 3861478300804232965, guid: 9ff284b5da412e24cbbf5d66202ca2aa, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 22.000006, y: 126.999985, z: 322.0001}
+  m_Center: {x: 0, y: 63.499992, z: 0}
