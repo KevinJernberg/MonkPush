@@ -269,7 +269,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh142748
+  m_Name: pb_Mesh54834
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3859,7 +3859,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh143604
+  m_Name: pb_Mesh55276
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5077,7 +5077,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh147670
+  m_Name: pb_Mesh56814
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -9068,7 +9068,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh143296
+  m_Name: pb_Mesh55096
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -12259,7 +12259,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh146252
+  m_Name: pb_Mesh56416
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -13025,7 +13025,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh149914
+  m_Name: pb_Mesh57434
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -15956,7 +15956,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh145526
+  m_Name: pb_Mesh56098
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -20752,7 +20752,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh143808
+  m_Name: pb_Mesh55378
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -21752,6 +21752,7 @@ GameObject:
   - component: {fileID: 721936175}
   - component: {fileID: 721936174}
   - component: {fileID: 721936173}
+  - component: {fileID: 721936179}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -21787,7 +21788,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 137.71951, y: 166.09943}
+  scrollPos: {x: 96.81045, y: 118.37217}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
@@ -21801,7 +21802,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 721936168}
   selectedCommands:
-  - {fileID: 721936161}
+  - {fileID: 721936166}
   variables:
   - {fileID: 721936169}
   description: 
@@ -21832,7 +21833,7 @@ MonoBehaviour:
   description: 
   character: {fileID: 1025923312}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 8300000, guid: ffe9fc21ceafeec41b1e14031b1602ff, type: 3}
+  voiceOverClip: {fileID: 8300000, guid: 23d2646829eb74a47b1accaec7a1b2fb, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -21942,9 +21943,7 @@ MonoBehaviour:
   itemId: 15
   indentLevel: 0
   storyText: "Oh right, that makes sense. Well, I should get going. I need to go
-    home and feed Takahito, he\u2019s probably back from his daily exploration. I
-    got too immersed in my book and forgot the time. See you tomorrow at the village,
-    Fu-jin."
+    home and feed Takahito, he\u2019s probably back from his daily exploration."
   description: 
   character: {fileID: 1025923312}
   portrait: {fileID: 0}
@@ -22011,6 +22010,7 @@ MonoBehaviour:
   commandList:
   - {fileID: 721936154}
   - {fileID: 721936153}
+  - {fileID: 721936179}
   - {fileID: 721936152}
   suppressAllAutoSelections: 0
 --- !u!114 &721936156
@@ -22268,7 +22268,7 @@ MonoBehaviour:
         audioSourceVal: {fileID: 0}
       booleanData:
         booleanRef: {fileID: 0}
-        booleanVal: 0
+        booleanVal: 1
       collectionData:
         collectionRef: {fileID: 0}
         collectionVal: {fileID: 0}
@@ -22774,7 +22774,7 @@ MonoBehaviour:
         audioSourceVal: {fileID: 0}
       booleanData:
         booleanRef: {fileID: 0}
-        booleanVal: 1
+        booleanVal: 0
       collectionData:
         collectionRef: {fileID: 0}
         collectionVal: {fileID: 0}
@@ -22985,6 +22985,34 @@ MonoBehaviour:
   targetObject: {fileID: 1802232433}
   methodName: UnFreeze
   delay: 0
+--- !u!114 &721936179
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721936135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 46
+  indentLevel: 0
+  storyText: I got too immersed in my book and forgot the time. See you tomorrow
+    at the village, Fu-jin.
+  description: 
+  character: {fileID: 1025923312}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: ffe9fc21ceafeec41b1e14031b1602ff, type: 3}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
 --- !u!1 &723506757
 GameObject:
   m_ObjectHideFlags: 0
@@ -32652,7 +32680,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh149248
+  m_Name: pb_Mesh57266
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -32816,7 +32844,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh146898
+  m_Name: pb_Mesh56610
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -38726,7 +38754,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1322801230}
   m_LocalRotation: {x: -0, y: -0.2588191, z: -0, w: 0.9659258}
-  m_LocalPosition: {x: 0.887, y: -0.051, z: -0.115}
+  m_LocalPosition: {x: 0.887, y: -0.6, z: -0.115}
   m_LocalScale: {x: 0.48349, y: 0.90411603, z: 0.38839}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -41483,7 +41511,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh152056
+  m_Name: pb_Mesh58060
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -42947,7 +42975,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh142988
+  m_Name: pb_Mesh54952
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -47513,15 +47541,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7579867798376252068, guid: fa8f827ba5f07c64ca1c63006bf56ebc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.92
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7579867798376252068, guid: fa8f827ba5f07c64ca1c63006bf56ebc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.989
+      value: -0.13
       objectReference: {fileID: 0}
     - target: {fileID: 7579867798376252068, guid: fa8f827ba5f07c64ca1c63006bf56ebc, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 13.48
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7579867798376252068, guid: fa8f827ba5f07c64ca1c63006bf56ebc, type: 3}
       propertyPath: m_LocalRotation.w
@@ -48062,7 +48090,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh144004
+  m_Name: pb_Mesh55456
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -49882,7 +49910,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1773128648}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -86.60237, y: 47.79, z: 56.27932}
+  m_LocalPosition: {x: -79.1, y: 52.153, z: 69.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -50853,15 +50881,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1845701850921384556, guid: 8cbec0e877004d94dbdb159d44cd3ab8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -97.479675
+      value: -31.754122
       objectReference: {fileID: 0}
     - target: {fileID: 1845701850921384556, guid: 8cbec0e877004d94dbdb159d44cd3ab8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 55.144424
+      value: 20.46462
       objectReference: {fileID: 0}
     - target: {fileID: 1845701850921384556, guid: 8cbec0e877004d94dbdb159d44cd3ab8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 78.88098
+      value: 8.378784
       objectReference: {fileID: 0}
     - target: {fileID: 1845701850921384556, guid: 8cbec0e877004d94dbdb159d44cd3ab8, type: 3}
       propertyPath: m_LocalRotation.w
@@ -50941,15 +50969,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8719124419207886303, guid: 8cbec0e877004d94dbdb159d44cd3ab8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.19999999
+      value: 0.19999516
       objectReference: {fileID: 0}
     - target: {fileID: 8719124419207886303, guid: 8cbec0e877004d94dbdb159d44cd3ab8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.3745159
+      value: 1.3745162
       objectReference: {fileID: 0}
     - target: {fileID: 8719124419207886303, guid: 8cbec0e877004d94dbdb159d44cd3ab8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5
+      value: -4.999997
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8cbec0e877004d94dbdb159d44cd3ab8, type: 3}
@@ -56852,7 +56880,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh142370
+  m_Name: pb_Mesh54640
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -61088,7 +61116,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2094624504}
   m_LocalRotation: {x: 0.048291363, y: 0.010672305, z: 0.00068812247, w: 0.9987761}
-  m_LocalPosition: {x: -4.8852386, y: 28.34, z: 0.8}
+  m_LocalPosition: {x: -69.1, y: 55.9, z: 75.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
