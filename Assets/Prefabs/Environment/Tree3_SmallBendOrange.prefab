@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6551844721792692211}
   - component: {fileID: 7873153731833339990}
   - component: {fileID: 5379541865540834460}
+  - component: {fileID: 1630774899}
   m_Layer: 0
   m_Name: Tree3_SmallBendOrange
   m_TagString: Untagged
@@ -25,9 +26,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5883676537035224393}
-  m_LocalRotation: {x: 0.02051097, y: -0, z: -0, w: 0.99978966}
+  m_LocalRotation: {x: 0.0205149, y: 0, z: 0, w: 0.99978954}
   m_LocalPosition: {x: 17.4, y: -11.8, z: -84.00988}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
+  m_LocalScale: {x: 0.01, y: 0.0060000005, z: 0.01}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -83,3 +84,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &1630774899
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5883676537035224393}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6099800089077584851, guid: a1cb868b0527a844aa881face1152b0d, type: 3}
