@@ -6,16 +6,11 @@ using UnityEngine.Serialization;
 
 public class OutOfBounds : MonoBehaviour
 {
-    [SerializeField]
-    
-
-    // Update is called once per frame
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
-            other.gameObject.GetComponent<PlayerRespawn>().Respawn();
+            other.gameObject.GetComponent<PlayerRespawn>().Respawn(); //Todo: Make event for this interaction, to reduce coupling
         }
     }
 }

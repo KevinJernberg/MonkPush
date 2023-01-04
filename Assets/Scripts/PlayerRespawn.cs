@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using StarterAssets;
 using UnityEngine;
 
@@ -17,15 +14,6 @@ public class PlayerRespawn : MonoBehaviour
     {
         _respawnPos = transform.position;
         _input = GetComponent<StarterAssetsInputs>();
-    }
-
-    private void Update()
-    {
-        // if (_input.pause)
-        // {
-        //     _input.pause = false;
-        //     onPuzzleReset.Raise();
-        // }
     }
 
     public void Respawn()

@@ -1,6 +1,5 @@
 using System;
 using UnityEngine;
-using UnityEngine.Experimental.GlobalIllumination;
 using UnityEngine.Serialization;
 
 public class BlockPusher : MonoBehaviour
@@ -67,7 +66,7 @@ public class BlockPusher : MonoBehaviour
         _soundOffset = 0;
         
         _fallingPointOffset = new Vector3();
-        //_fallingPointOffset.y = -(transform.localScale.y / 2) + 0.1f;
+        
         if (_PushDirection.x == 0) // Moving in Z axis
         {
             _collisionEdgeDistance = (_colliderBox.size.z * transform.localScale.x) / 2f;
@@ -85,6 +84,7 @@ public class BlockPusher : MonoBehaviour
         transform.position += _PushDirection * _pushForce * Time.deltaTime * _pushAccelerateFactor;
         Vector3 collisionCheckOriginPoint = new Vector3(transform.position.x,
             transform.position.y - transform.localScale.y * 0.5f + 0.05f, transform.position.z);
+        
         Debug.DrawRay(collisionCheckOriginPoint, _PushDirection, Color.green);
         if (_soundOffset != 2)
         {
