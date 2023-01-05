@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 74327304}
-  m_IndirectSpecularColor: {r: 0.44265014, g: 0.83207434, b: 0.8952946, a: 1}
+  m_IndirectSpecularColor: {r: 0.44266838, g: 0.8320789, b: 0.8952942, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -31188,7 +31188,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 7
   indentLevel: 1
-  text: "\"That\u2019s a pretty cool cave, Takahito.\""
+  text: '"Cool cave."'
   description: 
   targetBlock: {fileID: 1866130126}
   hideIfVisited: 0
@@ -31300,8 +31300,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 2096.3591
-    y: -138.80023
+    x: 2092.8296
+    y: -136.4473
     width: 84.117645
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -31358,7 +31358,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 26
   indentLevel: 0
-  text: "\"Good luck. See you around, kid.\u201D"
+  text: '"Good luck."'
   description: 
   targetBlock: {fileID: 1866130153}
   hideIfVisited: 0
@@ -31383,9 +31383,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 25
   indentLevel: 0
-  storyText: "You\u2019re right Mr Fu-Jin, no reason to dwell on it now. Ooh, maybe
-    it can be used for storage! Well, I\u2019ve got a forest to discover. I'm so
-    excited! Catch you later, mister!"
+  storyText: "You\u2019re right, Mr Fu-Jin! I've got other things to dwell on, like
+    what I'm going to explore next! Ooo maybe the forestI I'm so excited! Catch you
+    later, mister!"
   description: 
   character: {fileID: 1543104481}
   portrait: {fileID: 0}
@@ -31441,8 +31441,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 23
   indentLevel: 0
-  text: "\u201CYour mother is very wise. We\u2019ll find a use for the cave when
-    the time comes.\u201D"
+  text: '"You''re right."'
   description: 
   targetBlock: {fileID: 1866130137}
   hideIfVisited: 0
@@ -31999,7 +31998,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 39
   indentLevel: 0
-  storyText: Good luck. See you around, kid.
+  storyText: Good luck on your adventures. See you around, kid.
   description: 
   character: {fileID: 1723041731}
   portrait: {fileID: 0}
@@ -32027,7 +32026,7 @@ MonoBehaviour:
   itemId: 38
   indentLevel: 0
   storyText: "Your mother is very wise. We\u2019ll find a use for it when the time
-    comes."
+    comes, no reason to dwell on it now."
   description: 
   character: {fileID: 1723041731}
   portrait: {fileID: 0}
@@ -32055,7 +32054,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 2449.0808
-    y: 45.799946
+    y: 46.976418
     width: 122.94116
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
