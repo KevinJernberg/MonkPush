@@ -281,7 +281,6 @@ namespace StarterAssets
                 _animator.SetFloat("MoveSpeed", _speed);
             }
         }
-
         private void JumpAndGravity()
         {
             if (Grounded)
