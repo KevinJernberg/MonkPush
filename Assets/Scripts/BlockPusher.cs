@@ -29,8 +29,6 @@ public class BlockPusher : MonoBehaviour
     private AudioClip blockDragSound;
 
     private int _soundOffset;
-
-
     private void Start()
     {
         _colliderBox = gameObject.GetComponent<BoxCollider>();
@@ -62,6 +60,7 @@ public class BlockPusher : MonoBehaviour
         _moving = true;
         
         audioSource.clip = blockDragSound;
+        audioSource.volume = 1f;
         audioSource.loop = true;
         _soundOffset = 0;
         
@@ -100,6 +99,7 @@ public class BlockPusher : MonoBehaviour
             if (_soundOffset == 2)
             {
                 audioSource.clip = blockWallHitSound;
+                audioSource.volume = 0.1f;
                 audioSource.Play();
             }
         }
@@ -135,6 +135,7 @@ public class BlockPusher : MonoBehaviour
             {
                 _falling = false;
                 audioSource.clip = blockWallHitSound;
+                audioSource.volume = 0.1f;
                 audioSource.loop = false;
                 audioSource.Play();
                 RestrictPosition();
