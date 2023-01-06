@@ -7,6 +7,11 @@ using UnityEngine.SceneManagement;
 public class WinTriggerBox : MonoBehaviour
 {
     public LevelChanger levelChanger;
+    
+   [SerializeField] private AudioSource goatScream;
+
+    [SerializeField, Tooltip("The Sound made when a block hits a wall and stops")]
+    private AudioClip WinAudio;
     public enum ValidScenes
     {
         Main,
@@ -27,6 +32,8 @@ public class WinTriggerBox : MonoBehaviour
     // Start is called before the first frame update
     private void OnTriggerEnter(Collider other)
     {
+        goatScream.clip = WinAudio;
+        goatScream.Play();
         switch (nextScene)
         {
             case ValidScenes.Main:

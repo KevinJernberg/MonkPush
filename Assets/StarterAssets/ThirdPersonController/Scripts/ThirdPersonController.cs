@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Fungus;
+using UnityEngine;
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
 using UnityEngine.InputSystem;
 #endif
@@ -14,6 +15,8 @@ namespace StarterAssets
 #endif
     public class ThirdPersonController : MonoBehaviour
     {
+        public AudioSource JumpAudio;
+
         [Header("Player")]
         [Tooltip("Move speed of the character in m/s")]
         public float MoveSpeed = 2.0f;
@@ -278,7 +281,6 @@ namespace StarterAssets
                 _animator.SetFloat("MoveSpeed", _speed);
             }
         }
-
         private void JumpAndGravity()
         {
             if (Grounded)
@@ -305,7 +307,7 @@ namespace StarterAssets
                 {
                     // the square root of H * -2 * G = how much velocity needed to reach desired height
                     _verticalVelocity = Mathf.Sqrt(JumpHeight * Gravity * -1);
-                    
+
                     if (_hasAnimator)
                     {
                         _animator.SetBool("FreeFall", false);
