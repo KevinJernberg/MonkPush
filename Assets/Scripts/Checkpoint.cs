@@ -3,6 +3,8 @@ using UnityEngine;
 public class Checkpoint : MonoBehaviour
 {
     private Vector3 respawnPoint;
+    [SerializeField] private AudioSource goatYell;
+    [SerializeField] private AudioClip CheckpointAudio;
 
     private void Start()
     {
@@ -11,6 +13,8 @@ public class Checkpoint : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        goatYell.clip = CheckpointAudio;
+        goatYell.Play();
         if (other.gameObject.tag == "Player")
         {
             other.gameObject.GetComponent<PlayerRespawn>().SetRespawnPoint(respawnPoint);
