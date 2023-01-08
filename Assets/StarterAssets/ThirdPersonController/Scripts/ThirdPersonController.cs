@@ -307,6 +307,8 @@ namespace StarterAssets
                 {
                     // the square root of H * -2 * G = how much velocity needed to reach desired height
                     _verticalVelocity = Mathf.Sqrt(JumpHeight * Gravity * -1);
+                    JumpAudio.Play();
+                    _input.jump = false;
 
                     if (_hasAnimator)
                     {
@@ -344,6 +346,7 @@ namespace StarterAssets
                     {
                         _doubleJumpAble = false;
                         _verticalVelocity = Mathf.Sqrt(DoubleJumpHeight * Gravity * -1f);
+                        JumpAudio.Play();
                         if (_hasAnimator)
                         {
                             _animator.SetBool("FreeFall", false);

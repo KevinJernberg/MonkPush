@@ -132,14 +132,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26e54e5a728a9234ab24fcf1460ed8a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  JumpAudio: {fileID: 0}
   MoveSpeed: 5.335
   SprintSpeed: 5.335
   RotationSmoothTime: 0.12
   SpeedChangeRate: 10
   LandingAudioClip: {fileID: 8300000, guid: ff697d3070687ce4583faa0561a145a2, type: 3}
   FootstepAudioClips:
-  - {fileID: 8300000, guid: 72f526a6a9890f643a88e85a61c86c8a, type: 3}
-  - {fileID: 8300000, guid: 85016e0f2b01da248b9663dd49a161b0, type: 3}
+  - {fileID: 8300000, guid: 34d3ada9fa0ac944894067f4f46a9b74, type: 3}
+  - {fileID: 8300000, guid: 43eb4d77cedc9c842ad19f77ee95ba86, type: 3}
   - {fileID: 8300000, guid: 186de84b3207156479abe98f4958fed0, type: 3}
   - {fileID: 8300000, guid: 1a91fcd19acf1e54bba0945d9f390849, type: 3}
   - {fileID: 8300000, guid: 14e8a8d2158bec840b56c54f5266e692, type: 3}
@@ -151,7 +152,7 @@ MonoBehaviour:
   FootstepAudioVolume: 0.3
   JumpHeight: 4
   DoubleJumpHeight: 4
-  DoubleJump: 1
+  DoubleJump: 0
   Gravity: -15
   JumpTimeout: 0.01
   FallTimeout: 0.3
@@ -463,6 +464,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PushForce: 10
   PlayerPushSound: {fileID: 0}
+  PushImage: {fileID: 0}
 --- !u!114 &4165352244728406249
 MonoBehaviour:
   m_ObjectHideFlags: 0
