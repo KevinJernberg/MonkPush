@@ -17,6 +17,9 @@ namespace Work_In_Progress
 
         [SerializeField, Header("Sounds"), Tooltip("Pushing a Block")]
         private AudioClip PlayerPushSound;
+        
+        [SerializeField, Header("UI"), Tooltip("The image that displays when you may push a block")]
+        private GameObject PushImage;
 
         private static readonly int Push = Animator.StringToHash("Push");
 
@@ -35,6 +38,7 @@ namespace Work_In_Progress
             Debug.DrawRay(pushRay, forward, Color.green);
             if (Physics.Raycast(pushRay, transform.TransformDirection(Vector3.forward), out _hitBlock, 1f, 64))
             {
+                PushImage.SetActive(true);
                 if (_input.push)
                 {
                     _input.push = false;
@@ -51,6 +55,7 @@ namespace Work_In_Progress
             }
             else
             {
+                PushImage.SetActive(false);
                 _input.push = false;
             }
         }

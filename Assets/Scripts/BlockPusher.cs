@@ -18,6 +18,8 @@ public class BlockPusher : MonoBehaviour
 
     private float _pushAccelerateFactor = 1f;
 
+    private float _fallAccelerateFactor = 1f;
+
     [SerializeField]
     
     private AudioSource audioSource;
@@ -38,6 +40,7 @@ public class BlockPusher : MonoBehaviour
     {
         if (isFalling())
         {
+            FallAccelerate();
             Fall();
         }
         else if (_moving)
@@ -56,7 +59,9 @@ public class BlockPusher : MonoBehaviour
         _PushDirection = direction * -1f;
         _pushAccelerateFactor = 0.1f;
         _pushForce = force;
-        
+
+        _fallAccelerateFactor = 1;
+            
         _moving = true;
         
         audioSource.clip = blockDragSound;
@@ -116,6 +121,17 @@ public class BlockPusher : MonoBehaviour
             _pushAccelerateFactor = 1;
         }
     }
+    private void FallAccelerate()
+        {
+            if (_fallAccelerateFactor < 2)
+            {
+                _fallAccelerateFactor += Time.deltaTime;
+            }
+            else
+            {
+                _fallAccelerateFactor = 2;
+            }
+        }
 
     private bool isFalling()
     {
@@ -150,7 +166,7 @@ public class BlockPusher : MonoBehaviour
     private void Fall()
     {
         _falling = true;
-        transform.position += Vector3.down * (5f * Time.deltaTime);
+        transform.position += Vector3.down * (5f * Time.deltaTime) * _fallAccelerateFactor;
     }
 
     private void RestrictPosition()
