@@ -16,7 +16,8 @@ namespace Work_In_Progress
         private bool _hasAnimator;
 
         [SerializeField, Header("Sounds"), Tooltip("Pushing a Block")]
-        private AudioClip PlayerPushSound;
+        private AudioSource audioSource;
+        [SerializeField] private AudioClip PlayerPushSound;
         
         [SerializeField, Header("UI"), Tooltip("The image that displays when you may push a block")]
         private GameObject PushImage;
@@ -48,7 +49,9 @@ namespace Work_In_Progress
                     }
                     if (PlayerPushSound != null)
                     {
-                        AudioSource.PlayClipAtPoint(PlayerPushSound, transform.position);
+                        audioSource.clip = PlayerPushSound;
+                        audioSource.volume = 0.3f;
+                        audioSource.Play();
                     }
                     _hitBlock.transform.gameObject.GetComponent<BlockPusher>().StartPush(_hitBlock.normal, PushForce);
                 }

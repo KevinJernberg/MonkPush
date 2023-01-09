@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 74327304}
-  m_IndirectSpecularColor: {r: 0.4428323, g: 0.83212006, b: 0.89529043, a: 1}
+  m_IndirectSpecularColor: {r: 0.4426073, g: 0.83206075, b: 0.89529616, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7617,6 +7617,10 @@ PrefabInstance:
       propertyPath: JumpAudio
       value: 
       objectReference: {fileID: 1432880128}
+    - target: {fileID: 87225024464519687, guid: 8cbec0e877004d94dbdb159d44cd3ab8, type: 3}
+      propertyPath: jumpSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 33fa0214f552b7f41ac52f26eb20dff4, type: 3}
     - target: {fileID: 756096892077332662, guid: 8cbec0e877004d94dbdb159d44cd3ab8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.294
@@ -7737,6 +7741,10 @@ PrefabInstance:
       propertyPath: PushImage
       value: 
       objectReference: {fileID: 1627584721}
+    - target: {fileID: 9173359060935233641, guid: 8cbec0e877004d94dbdb159d44cd3ab8, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 1432880128}
     - target: {fileID: 9173359060935233641, guid: 8cbec0e877004d94dbdb159d44cd3ab8, type: 3}
       propertyPath: PlayerPushSound
       value: 
@@ -17197,6 +17205,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PushForce: 4
+  audioSource: {fileID: 0}
   PlayerPushSound: {fileID: 0}
   PushImage: {fileID: 0}
 --- !u!114 &1093643387
@@ -17252,6 +17261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JumpAudio: {fileID: 0}
+  jumpSound: {fileID: 0}
   MoveSpeed: 2
   SprintSpeed: 5.335
   RotationSmoothTime: 0.12
@@ -24488,7 +24498,7 @@ AudioSource:
   m_GameObject: {fileID: 1432880098}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 301eb0dabbbef5b4db077f50d2a69184, type: 2}
   m_audioClip: {fileID: 8300000, guid: 5f7b0bd7022e3d1459438cf420a7f2f7, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
