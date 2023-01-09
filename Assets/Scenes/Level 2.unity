@@ -53337,6 +53337,10 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 77fe4abb09a1ab5498d9a6402d7078f9, type: 3}
+    - target: {fileID: 6079038415395501888, guid: 344d3528ce700274eaf66b5149f07cc7, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 5971343614639687182, guid: fc97269ec04dc0948ba50aa124a6c081, type: 2}
     - target: {fileID: 6079038415395501889, guid: 344d3528ce700274eaf66b5149f07cc7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -119.2
@@ -53377,6 +53381,10 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: aaff1600dec82ea4bbe0b146e901657a, type: 3}
+    - target: {fileID: 6079038416656949787, guid: 344d3528ce700274eaf66b5149f07cc7, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 7372574113202871158, guid: fc97269ec04dc0948ba50aa124a6c081, type: 2}
     - target: {fileID: 6079038416927624673, guid: 344d3528ce700274eaf66b5149f07cc7, type: 3}
       propertyPath: m_Name
       value: Sounds_and_Music
@@ -53922,6 +53930,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1802232451}
     - target: {fileID: 87225024464519687, guid: 8cbec0e877004d94dbdb159d44cd3ab8, type: 3}
+      propertyPath: jumpSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 5f7b0bd7022e3d1459438cf420a7f2f7, type: 3}
+    - target: {fileID: 87225024464519687, guid: 8cbec0e877004d94dbdb159d44cd3ab8, type: 3}
       propertyPath: DoubleJump
       value: 1
       objectReference: {fileID: 0}
@@ -54042,6 +54054,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 211770695}
     - target: {fileID: 9173359060935233641, guid: 8cbec0e877004d94dbdb159d44cd3ab8, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 1802232451}
+    - target: {fileID: 9173359060935233641, guid: 8cbec0e877004d94dbdb159d44cd3ab8, type: 3}
       propertyPath: PlayerPushSound
       value: 
       objectReference: {fileID: 8300000, guid: 6fdbb76edb4edc441b2e4a7b01838782, type: 3}
@@ -54083,7 +54099,7 @@ AudioSource:
   m_GameObject: {fileID: 1802232433}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 301eb0dabbbef5b4db077f50d2a69184, type: 2}
   m_audioClip: {fileID: 8300000, guid: 5f7b0bd7022e3d1459438cf420a7f2f7, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
