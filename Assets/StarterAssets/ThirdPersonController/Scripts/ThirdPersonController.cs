@@ -16,6 +16,7 @@ namespace StarterAssets
     public class ThirdPersonController : MonoBehaviour
     {
         public AudioSource JumpAudio;
+        public AudioClip jumpSound;
 
         [Header("Player")]
         [Tooltip("Move speed of the character in m/s")]
@@ -307,6 +308,7 @@ namespace StarterAssets
                 {
                     // the square root of H * -2 * G = how much velocity needed to reach desired height
                     _verticalVelocity = Mathf.Sqrt(JumpHeight * Gravity * -1);
+                    JumpAudio.clip = jumpSound;
                     JumpAudio.Play();
                     _input.jump = false;
 
@@ -346,6 +348,8 @@ namespace StarterAssets
                     {
                         _doubleJumpAble = false;
                         _verticalVelocity = Mathf.Sqrt(DoubleJumpHeight * Gravity * -1f);
+                        JumpAudio.clip = jumpSound;
+                        JumpAudio.volume = 1f;
                         JumpAudio.Play();
                         if (_hasAnimator)
                         {
