@@ -40,20 +40,21 @@ public class Checkpoint : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             other.gameObject.GetComponent<PlayerRespawn>().SetRespawnPoint(respawnPoint);
-            if (!cameraPan)
-                return;
             goatYell.clip = checkpointAudio;
             goatYell.Play(); 
             _frozen = true;
-            _cameraComponent.Priority = 10;
         }
     }
 
     private void Update()
     {
-        if (cameraPan && !_frozen) 
+        if (!_frozen)
             return;
-        
+        if (!cameraPan)
+        {
+            gameObject.SetActive(false);
+            return;
+        }
         _playerController.isFrozen = true;
         _playerInput.look = Vector2.zero;
         _playerInput.Pause = false;
@@ -65,10 +66,12 @@ public class Checkpoint : MonoBehaviour
                 _playerController.isFrozen = false;
                 _frozen = false;
                 gameObject.SetActive(false);
-                Debug.Log("dam");
                 break;
-            case > 4:
+            case >= 4:
                 _cameraComponent.Priority = 0;
+                break;
+            case < 4:
+                _cameraComponent.Priority = 10;
                 break;
         }
     }
