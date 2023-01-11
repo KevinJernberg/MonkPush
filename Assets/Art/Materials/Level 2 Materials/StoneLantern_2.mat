@@ -7,12 +7,11 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: TreeSmallBend
+  m_Name: StoneLantern_2
   m_Shader: {fileID: 4800000, guid: 7cd5de0b884b14f88ab763ef465e1799, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords:
   - _SEGMENTED_ON
-  - _WINDQUALITY_FASTEST
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -38,24 +37,12 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _DetailTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _EmissionMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _ExtraTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _GlossMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: f1e10551e52eb52419261ecd91301869, type: 3}
+        m_Texture: {fileID: 2800000, guid: 2942c801eb62e7b48a0a8bae01dbbcff, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -70,77 +57,41 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _ShadowOffset:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _SubsurfaceTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _TranslucencyMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _AO: 2.4
     - _AmbientCol: 0
-    - _BaseLight: 0.35
-    - _BillboardKwToggle: 0
-    - _BillboardShadowFade: 0.836
     - _BumpScale: 1
     - _Clipped: 0
     - _ColBright: 0
     - _ColIntense: 1
-    - _Cull: 2
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _GlossMapScale: 1
-    - _Glossiness: 0
+    - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _HueVariationKwToggle: 0
     - _Lumin: 0
     - _MaxLight: 0.9
     - _Metallic: 0
     - _MinLight: 0.35
     - _Mode: 0
-    - _NormalMapKwToggle: 0
     - _OcclusionStrength: 1
     - _Offset: 0
-    - _OtlWidth: 1
     - _Parallax: 0.02
     - _Segmented: 1
-    - _ShadowStrength: 1
-    - _Shininess: 0.06
     - _ShnIntense: 0.3
     - _ShnOverlap: 0
     - _ShnRange: 0.05
     - _ShnSmooth: 0
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
-    - _SquashAmount: 1
     - _SrcBlend: 1
     - _Steps: 2
     - _StpSmooth: 0
-    - _SubsurfaceIndirect: 0.25
-    - _SubsurfaceKwToggle: 0
-    - _TranslucencyViewDependency: 0.7
-    - _TwoSided: 2
     - _UVSec: 0
-    - _WindQuality: 1
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _HueVariation: {r: 1, g: 0.5, b: 0, a: 0.1}
-    - _HueVariationColor: {r: 0.9793825, g: 1, b: 0, a: 0.1}
-    - _OtlColor: {r: 0, g: 0, b: 0, a: 1}
-    - _ShnColor: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-    - _SpecColor: {r: 0.6132076, g: 0.373131, b: 0.373131, a: 1}
-    - _SubsurfaceColor: {r: 1, g: 1, b: 1, a: 1}
-    - _TranslucencyColor: {r: 0.73, g: 0.85, b: 0.41, a: 1}
-    - _TreeInstanceColor: {r: 1, g: 1, b: 1, a: 1}
-    - _TreeInstanceScale: {r: 1, g: 1, b: 1, a: 1}
+    - _ShnColor: {r: 0.8666667, g: 0.64705884, b: 0.61960787, a: 1}
   m_BuildTextureStacks: []
