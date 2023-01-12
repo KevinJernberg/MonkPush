@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1366551369}
-  m_IndirectSpecularColor: {r: 0.4969263, g: 0.24712634, b: 0.34346974, a: 1}
+  m_IndirectSpecularColor: {r: 0.49730378, g: 0.24721959, b: 0.3435346, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -52210,7 +52210,7 @@ PrefabInstance:
       objectReference: {fileID: 1802232433}
     - target: {fileID: 1399499943056623657, guid: ef3fefabc32ec254cb1fc234729e5160, type: 3}
       propertyPath: cameraPan
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1399499943056623657, guid: ef3fefabc32ec254cb1fc234729e5160, type: 3}
       propertyPath: situationCamera
@@ -56642,7 +56642,7 @@ PrefabInstance:
     - target: {fileID: 6079038416656949787, guid: 344d3528ce700274eaf66b5149f07cc7, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: aaff1600dec82ea4bbe0b146e901657a, type: 3}
+      objectReference: {fileID: 8300000, guid: 5be79b7e84c957149b703e849e1e5752, type: 3}
     - target: {fileID: 6079038416656949787, guid: 344d3528ce700274eaf66b5149f07cc7, type: 3}
       propertyPath: OutputAudioMixerGroup
       value: 

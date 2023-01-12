@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 74327304}
-  m_IndirectSpecularColor: {r: 0.4426073, g: 0.83206075, b: 0.89529616, a: 1}
+  m_IndirectSpecularColor: {r: 0.442667, g: 0.83207804, b: 0.8952944, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1275,7 +1275,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh99906
+  m_Name: pb_Mesh53458
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5475,7 +5475,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh98198
+  m_Name: pb_Mesh52788
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7881,6 +7881,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7800542475094219933, guid: 8cbec0e877004d94dbdb159d44cd3ab8, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7800542475094219933, guid: 8cbec0e877004d94dbdb159d44cd3ab8, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7800542475094219933, guid: 8cbec0e877004d94dbdb159d44cd3ab8, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8719124419207886302, guid: 8cbec0e877004d94dbdb159d44cd3ab8, type: 3}
       propertyPath: m_Priority
       value: 1
@@ -10276,7 +10288,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh99876
+  m_Name: pb_Mesh53440
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10440,7 +10452,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh99548
+  m_Name: pb_Mesh53336
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -17280,7 +17292,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh98974
+  m_Name: pb_Mesh-38412
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -35672,6 +35684,14 @@ PrefabInstance:
       propertyPath: OutputAudioMixerGroup
       value: 
       objectReference: {fileID: 5971343614639687182, guid: fc97269ec04dc0948ba50aa124a6c081, type: 2}
+    - target: {fileID: 6079038416656949787, guid: 344d3528ce700274eaf66b5149f07cc7, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6079038416656949787, guid: 344d3528ce700274eaf66b5149f07cc7, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: b82b0d87309722341a8926c780d9426d, type: 3}
     - target: {fileID: 6079038416656949787, guid: 344d3528ce700274eaf66b5149f07cc7, type: 3}
       propertyPath: OutputAudioMixerGroup
       value: 
